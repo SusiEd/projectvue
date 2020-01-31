@@ -6,6 +6,7 @@ import Login from './pages/Login'
 import Dashboard from './pages/user/Dashboard'
 import Test from './pages/Test'
 import User from './pages/User'
+import Todo from './pages/Todo'
 import AdminDashboard from './pages/admin/AdminDashboard'
 // Routes
 const routes = [
@@ -41,18 +42,19 @@ const routes = [
         redirect: '/dashboard/test',
         component: Dashboard,
         meta: {
-            auth: true
+            //auth: true
+            auth: {roles: 1, redirect: {name: 'login'}, forbiddenRedirect: '/403'}
 
     }, children:
         [
             {
                 path: '/dashboard/test',
-                name: 'test',
+                name: 'dashboard.test',
                 component: Test
             },
             {
                 path: '/dashboard/user',
-                name: 'user',
+                name: 'dashboard.user',
                 component: User
             }
         ]
@@ -64,20 +66,31 @@ const routes = [
         redirect: '/admin/test',
         component: AdminDashboard,
         meta: {
-            auth: true
+            //auth: true
+            auth: {roles: 2, redirect: {name: 'login'}, forbiddenRedirect: '/403'}
         }, children:
             [
                 {
                     path: '/admin/test',
-                    name: 'test',
+                    name: 'admin.test',
                     component: Test
                 },
                 {
                     path: '/admin/user',
-                    name: 'user',
+                    name: 'admin.user',
                     component: User
                 },
+                {
+                    path: '/admin/todo',
+                    name: 'admin.todo',
+                    component: Todo
+                },
             ]
+    },
+    // wildcard
+    {
+        path: '*',
+        redirect:'/'
     }
 
 ];

@@ -5,12 +5,12 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto" v-if="userData.role === 1">
+            <ul class="navbar-nav mr-auto" v-if="$auth.check(1)">
                 <li class="nav-item" v-for="(route, key) in routes.user" v-bind:key="route.path">
                     <router-link :to="{ name : route.path }" :key="key" class="nav-link">{{route.name}}</router-link>
                 </li>
             </ul>
-            <ul class="navbar-nav mr-auto" v-if="userData.role === 2">
+            <ul class="navbar-nav mr-auto" v-if="$auth.check(2)">
                 <li class="nav-item" v-for="(route, key) in routes.admin" v-bind:key="route.path">
                     <router-link :to="{ name : route.path }" :key="key" class="nav-link">{{route.name}}</router-link>
                 </li>
@@ -41,40 +41,18 @@
                     ],
                     // LOGGED USER
                     user: [
-                        { name: 'Test', path: 'test' },
-                        { name: 'User', path: 'user' }
+                        { name: 'Test', path: 'dashboard.test' },
+                        { name: 'User', path: 'dashboard.user' }
                     ],
                     // LOGGED ADMIN
                     admin: [
-                        { name: 'Test', path: 'test' },
-                        { name: 'User', path: 'user' }
+                        { name: 'Test', path: 'admin.test' },
+                        { name: 'User', path: 'admin.user' },
+                        { name: 'Todoliste', path: 'admin.todo' }
                     ]
                 }
             }
-        },
-        methods: {
-            getUser(){
-                if(!this.userData.role){
-                axios.get('auth/user')
-                .then(res=>{
-                    this.userData = res.data.data;
-                    console.log(this.userData);
-                })
-                .catch(err=>{
-                    console.error(err);
-                })
-                }
-            }
-        },
-        beforeUpdate() {
-            this.getUser();
-        },
-        mounted() {
-            //
-        },
-        created() {
-
-        },
+        }
     }
 </script>
 <style>

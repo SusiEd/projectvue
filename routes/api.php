@@ -29,6 +29,8 @@ Route::prefix('auth')->group(function () {
         Route::get('user', 'AuthController@user');
         // Logout user from application
         Route::post('logout', 'AuthController@logout');
+        Route::get('getUsers', 'UserController@index');
+        Route::put('putUser', 'UserController@putUser');
     });
 });
 
