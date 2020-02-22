@@ -1,6 +1,7 @@
 import VueRouter from 'vue-router'
 // Pages
 import Home from './pages/Home'
+import Blog from './pages/Blog'
 import Register from './pages/Register'
 import Login from './pages/Login'
 import Dashboard from './pages/user/Dashboard'
@@ -15,16 +16,23 @@ const routes = [
         name: 'home',
         component: Home,
         meta: {
-            auth: undefined
+            auth: undefined  // everybody is allowed to see
         }
     },
-
+    {
+        path: '/blog',
+        name: 'blog',
+        component: Blog,
+        meta: {
+            auth: undefined // everybody is allowed to see
+        }
+    },
     {
         path: '/register',
         name: 'register',
         component: Register,
         meta: {
-            auth: false
+            auth: false // only see, wenn you are not logged
         }
     },
     {
@@ -32,7 +40,7 @@ const routes = [
         name: 'login',
         component: Login,
         meta: {
-            auth: false
+            auth: false // only see, wenn you are not logged
         }
     },
     // USER ROUTES

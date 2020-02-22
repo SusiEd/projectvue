@@ -36,6 +36,7 @@
                 routes: {
                     // UNLOGGED
                     unlogged: [
+                        { name: 'Blog', path: 'blog'},
                         { name: 'Register', path: 'register' },
                         { name: 'Login', path: 'login'}
                     ],
@@ -56,7 +57,9 @@
     }
 </script>
 <style>
-    .navbar {
-        margin-bottom: 30px;
+    .bg-dark {
+        background-color: #000000 !important;
     }
+
+
 </style>
