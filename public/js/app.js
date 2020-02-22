@@ -3018,6 +3018,8 @@ module.exports = {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_Menu_vue__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/Menu.vue */ "./resources/js/components/Menu.vue");
+/* harmony import */ var _components_Footer_vue__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/Footer.vue */ "./resources/js/components/Footer.vue");
+//
 //
 //
 //
@@ -3029,13 +3031,89 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 
+
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {//
     };
   },
   components: {
-    Menu: _components_Menu_vue__WEBPACK_IMPORTED_MODULE_0__["default"]
+    Menu: _components_Menu_vue__WEBPACK_IMPORTED_MODULE_0__["default"],
+    Footer: _components_Footer_vue__WEBPACK_IMPORTED_MODULE_1__["default"]
+  }
+});
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Footer.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib??ref--4-0!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Footer.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+/* harmony default export */ __webpack_exports__["default"] = ({
+  mounted: function mounted() {
+    console.log('Component mounted.');
   }
 });
 
@@ -40660,13 +40738,124 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { attrs: { id: "main" } }, [
-    _c("header", { attrs: { id: "header" } }, [_c("Menu")], 1),
-    _vm._v(" "),
-    _c("div", { attrs: { id: "content" } }, [_c("router-view")], 1)
-  ])
+  return _c(
+    "div",
+    { attrs: { id: "main" } },
+    [
+      _c("header", { attrs: { id: "header" } }, [_c("Menu")], 1),
+      _vm._v(" "),
+      _c("div", { attrs: { id: "content" } }, [_c("router-view")], 1),
+      _vm._v(" "),
+      _c("Footer")
+    ],
+    1
+  )
 }
 var staticRenderFns = []
+render._withStripped = true
+
+
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Footer.vue?vue&type=template&id=61a7c374&":
+/*!*********************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/vue-loader/lib??vue-loader-options!./resources/js/components/Footer.vue?vue&type=template&id=61a7c374& ***!
+  \*********************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _vm._m(0)
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("footer", { staticClass: "footer" }, [
+      _c("div", { staticClass: "container" }, [
+        _c("div", { staticClass: "row align-items-center" }, [
+          _c("div", { staticClass: "col-md-4" }, [
+            _c("span", { staticClass: "copyright" }, [
+              _vm._v("© 2020 Hey New Me")
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-4" }, [
+            _c("ul", { staticClass: "list-inline social-buttons" }, [
+              _c("li", { staticClass: "list-inline-item" }, [
+                _c("a", { attrs: { href: "#" } }, [
+                  _c("img", {
+                    attrs: { src: "/assets/img/instagram-brands.svg", alt: "" }
+                  })
+                ])
+              ]),
+              _vm._v(" "),
+              _c("li", { staticClass: "list-inline-item" }, [
+                _c("a", { attrs: { href: "#" } }, [
+                  _c("img", {
+                    attrs: { src: "/assets/img/youtube-brands.svg", alt: "" }
+                  })
+                ])
+              ]),
+              _vm._v(" "),
+              _c("li", { staticClass: "list-inline-item" }, [
+                _c("a", { attrs: { href: "#" } }, [
+                  _c("img", {
+                    attrs: { src: "/assets/img/facebook-f-brands.svg", alt: "" }
+                  })
+                ])
+              ]),
+              _vm._v(" "),
+              _c("li", { staticClass: "list-inline-item" }, [
+                _c("a", { attrs: { href: "#" } }, [
+                  _c("img", {
+                    attrs: { src: "/assets/img/twitter-brands.svg", alt: "" }
+                  })
+                ])
+              ]),
+              _vm._v(" "),
+              _c("li", { staticClass: "list-inline-item" }, [
+                _c("a", { attrs: { href: "#" } }, [
+                  _c("img", {
+                    attrs: {
+                      src: "/assets/img/pinterest-p-brands.svg",
+                      alt: ""
+                    }
+                  })
+                ])
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-4" }, [
+            _c("ul", { staticClass: "list-inline quicklinks" }, [
+              _c("li", { staticClass: "list-inline-item" }, [
+                _c("a", { attrs: { href: "#" } }, [_vm._v("Impressum")])
+              ]),
+              _vm._v(" "),
+              _c("li", { staticClass: "list-inline-item" }, [
+                _c("a", { attrs: { href: "#" } }, [_vm._v("Datenschutz")])
+              ]),
+              _vm._v(" "),
+              _c("li", { staticClass: "list-inline-item" }, [
+                _c("a", { attrs: { href: "#" } }, [_vm._v("AGB")])
+              ])
+            ])
+          ])
+        ])
+      ])
+    ])
+  }
+]
 render._withStripped = true
 
 
@@ -40695,7 +40884,7 @@ var render = function() {
       _c(
         "router-link",
         { staticClass: "navbar-brand", attrs: { to: { name: "home" } } },
-        [_vm._v("Laravel + JWT + Vue JS")]
+        [_vm._v("HEY NEW ME")]
       ),
       _vm._v(" "),
       _vm._m(0),
@@ -40861,24 +41050,492 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", { staticClass: "container" }, [
-      _c("div", { staticClass: "card card-default" }, [
-        _c("div", { staticClass: "card-header" }, [_vm._v("Home")]),
-        _vm._v(" "),
-        _c("div", { staticClass: "card-body" }, [
-          _c("p", [
-            _vm._v(
-              "\n                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt amet tempora sint dolor nam quam quos inventore odio hic, enim beatae nulla in tenetur odit natus facere voluptas excepturi deleniti? Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur sit eligendi rem et minus dolor hic, placeat eum sequi ipsa, debitis ex magni. Hic laudantium consectetur aliquid eos fuga cumque.\n            "
-            )
-          ]),
-          _vm._v(" "),
-          _c("p", [
-            _vm._v(
-              "\n                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt amet tempora sint dolor nam quam quos inventore odio hic, enim beatae nulla in tenetur odit natus facere voluptas excepturi deleniti? Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur sit eligendi rem et minus dolor hic, placeat eum sequi ipsa, debitis ex magni. Hic laudantium consectetur aliquid eos fuga cumque.\n            "
+    return _c("body", { attrs: { id: "page-top" } }, [
+      _c("header", { staticClass: "masthead" }, [
+        _c("div", { staticClass: "container" }, [
+          _c("div", { staticClass: "intro-text" }, [
+            _c("img", {
+              staticClass: "logo",
+              attrs: { src: "/assets/img/logo-heynewme.svg", alt: "" }
+            }),
+            _vm._v(" "),
+            _c("div", { staticClass: "intro-lead-in" }, [
+              _vm._v("Diätkochboxen")
+            ]),
+            _vm._v(" "),
+            _c("h1", { staticClass: "intro-heading text-uppercase" }, [
+              _vm._v("Koch dich schlank!")
+            ]),
+            _vm._v(" "),
+            _c(
+              "a",
+              {
+                staticClass:
+                  "btn btn-primary btn-xl text-uppercase js-scroll-trigger",
+                attrs: { href: "#services" }
+              },
+              [_vm._v("Diätkochbox bestellen")]
             )
           ])
         ])
-      ])
+      ]),
+      _vm._v(" "),
+      _c(
+        "section",
+        { staticClass: "page-section", attrs: { id: "services" } },
+        [
+          _c("div", { staticClass: "container" }, [
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-lg-12 text-center" }, [
+                _c("h2", { staticClass: "section-heading text-uppercase" }, [
+                  _vm._v("Endlich abnehmen!")
+                ]),
+                _vm._v(" "),
+                _c("h3", { staticClass: "section-subheading text-muted" }, [
+                  _vm._v("Hey New Me hilft dir dabei!")
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row text-center" }, [
+              _c("div", { staticClass: "col-md-4" }, [
+                _c("span", { staticClass: "fa-stack fa-4x" }, [
+                  _c("img", {
+                    attrs: {
+                      src: "/assets/img/icon-kochen.svg",
+                      alt: "Selber Kochen"
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("h4", { staticClass: "service-heading" }, [
+                  _vm._v("Tolle Gerichte")
+                ]),
+                _vm._v(" "),
+                _c("p", { staticClass: "text-muted" }, [
+                  _vm._v(
+                    "zum selber Kochen. Wir liefern Diätrezepte und frische Zutaten direkt zu Dir nach Hause!"
+                  )
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-4" }, [
+                _c("span", { staticClass: "fa-stack fa-4x" }, [
+                  _c("img", {
+                    attrs: {
+                      src: "/assets/img/icon-flexibel.svg",
+                      alt: "Absolute Flexibilität"
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("h4", { staticClass: "service-heading" }, [
+                  _vm._v("Flexibel")
+                ]),
+                _vm._v(" "),
+                _c("p", { staticClass: "text-muted" }, [
+                  _vm._v(
+                    "Unser Programm unterstützt Deine Diät. Plan alle Gerichte individuell und integrier Sie so in Deinen Alltag."
+                  )
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-4" }, [
+                _c("span", { staticClass: "fa-stack fa-4x" }, [
+                  _c("img", {
+                    attrs: {
+                      src: "/assets/img/icon-abnehmen.svg",
+                      alt: "Endlich abnehmen"
+                    }
+                  })
+                ]),
+                _vm._v(" "),
+                _c("h4", { staticClass: "service-heading" }, [
+                  _vm._v("Abnehmen")
+                ]),
+                _vm._v(" "),
+                _c("p", { staticClass: "text-muted" }, [
+                  _vm._v(
+                    "Wir helfen Dir dabei. Wir suchen für Dich Rezpete und kaufen für Dich ein. So nimmt du im Handumdrehen ab."
+                  )
+                ])
+              ])
+            ])
+          ])
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "section",
+        { staticClass: "bg-light page-section", attrs: { id: "recipe" } },
+        [
+          _c("div", { staticClass: "container" }, [
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-lg-12 text-center" }, [
+                _c("h2", { staticClass: "section-heading text-uppercase" }, [
+                  _vm._v("Rezepte dieser Woche")
+                ]),
+                _vm._v(" "),
+                _c("h3", { staticClass: "section-subheading text-muted" }, [
+                  _vm._v("Nimm einfach und gesund ab.")
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-md-4 col-sm-6 recipe-item" }, [
+                _c(
+                  "a",
+                  {
+                    staticClass: "recipe-link",
+                    attrs: { "data-toggle": "modal", href: "#portfolioModal1" }
+                  },
+                  [
+                    _c("div", { staticClass: "recipe-hover" }, [
+                      _c("div", { staticClass: "recipe-hover-content" }, [
+                        _c("p", [_vm._v("Zu den Rezepten >")])
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("img", {
+                      staticClass: "img-fluid",
+                      attrs: {
+                        src: "/assets/img/01-haehnchen-gemuese-thumbnail.jpg",
+                        alt: "Hähnchen mit Gemüse"
+                      }
+                    })
+                  ]
+                ),
+                _vm._v(" "),
+                _c("div", { staticClass: "recipe-caption" }, [
+                  _c("h4", [_vm._v("Hähnchen mit Gemüse")]),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "text-muted" }, [
+                    _vm._v("500 Kalorien")
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-4 col-sm-6 recipe-item" }, [
+                _c(
+                  "a",
+                  {
+                    staticClass: "recipe-link",
+                    attrs: { "data-toggle": "modal", href: "#portfolioModal2" }
+                  },
+                  [
+                    _c("div", { staticClass: "recipe-hover" }, [
+                      _c("div", { staticClass: "recipe-hover-content" }, [
+                        _c("p", [_vm._v("Zu den Rezepten >")])
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("img", {
+                      staticClass: "img-fluid",
+                      attrs: {
+                        src: "/assets/img/02-rotebeete-suppe-thumbnail.jpg",
+                        alt: ""
+                      }
+                    })
+                  ]
+                ),
+                _vm._v(" "),
+                _c("div", { staticClass: "recipe-caption" }, [
+                  _c("h4", [_vm._v("Rote Beete Suppe")]),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "text-muted" }, [
+                    _vm._v("300 Kalorien")
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-md-4 col-sm-6 recipe-item" }, [
+                _c(
+                  "a",
+                  {
+                    staticClass: "recipe-link",
+                    attrs: { "data-toggle": "modal", href: "#portfolioModal3" }
+                  },
+                  [
+                    _c("div", { staticClass: "recipe-hover" }, [
+                      _c("div", { staticClass: "recipe-hover-content" }, [
+                        _c("p", [_vm._v("Zu den Rezepten >")])
+                      ])
+                    ]),
+                    _vm._v(" "),
+                    _c("img", {
+                      staticClass: "img-fluid",
+                      attrs: {
+                        src: "/assets/img/03-pilz-pfanne-thumbnail.jpg",
+                        alt: ""
+                      }
+                    })
+                  ]
+                ),
+                _vm._v(" "),
+                _c("div", { staticClass: "recipe-caption" }, [
+                  _c("h4", [_vm._v("Pilzpfanne")]),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "text-muted" }, [
+                    _vm._v("400 Kalorien")
+                  ])
+                ])
+              ])
+            ])
+          ])
+        ]
+      ),
+      _vm._v(" "),
+      _c("section", { staticClass: "page-section", attrs: { id: "about" } }, [
+        _c("div", { staticClass: "container" }, [
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col-lg-12 text-center" }, [
+              _c("h2", { staticClass: "section-heading text-uppercase" }, [
+                _vm._v("Wie funktioniert's")
+              ]),
+              _vm._v(" "),
+              _c("h3", { staticClass: "section-subheading text-muted" }, [
+                _vm._v("So klappt es endlich mit dem Abnehmen")
+              ])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "row" }, [
+            _c("div", { staticClass: "col-lg-12" }, [
+              _c("ul", { staticClass: "timeline" }, [
+                _c("li", [
+                  _c("div", { staticClass: "timeline-image" }, [
+                    _c("img", {
+                      staticClass: "rounded-circle img-fluid",
+                      attrs: {
+                        src: "/assets/img/about-rezepte.jpg",
+                        alt: "Rezeptauswahl"
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "timeline-panel" }, [
+                    _c("div", { staticClass: "timeline-heading" }, [
+                      _c("h4", [_vm._v("1. Rezeptauswahl")])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "timeline-body" }, [
+                      _c("p", { staticClass: "text-muted" }, [
+                        _vm._v(
+                          "Wähle wöchentlich aus 15 kalorienarmen Gerichten online aus."
+                        )
+                      ])
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("li", { staticClass: "timeline-inverted" }, [
+                  _c("div", { staticClass: "timeline-image" }, [
+                    _c("img", {
+                      staticClass: "rounded-circle img-fluid",
+                      attrs: {
+                        src: "/assets/img/about-lieferung.jpg",
+                        alt: "Angekommene Lieferung"
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "timeline-panel" }, [
+                    _c("div", { staticClass: "timeline-heading" }, [
+                      _c("h4", [_vm._v("2. Lieferung")])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "timeline-body" }, [
+                      _c("p", { staticClass: "text-muted" }, [
+                        _vm._v(
+                          "Rezepte und Zutaten werden direkt zu dir nach Hause geliefert."
+                        )
+                      ])
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("li", [
+                  _c("div", { staticClass: "timeline-image" }, [
+                    _c("img", {
+                      staticClass: "rounded-circle img-fluid",
+                      attrs: {
+                        src: "/assets/img/about-kochen.jpg",
+                        alt: "Kochvorgang"
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "timeline-panel" }, [
+                    _c("div", { staticClass: "timeline-heading" }, [
+                      _c("h4", [_vm._v("3. Kochen")])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "timeline-body" }, [
+                      _c("p", { staticClass: "text-muted" }, [
+                        _vm._v(
+                          "Innerhalb von 30 Minuten frisch & gesund kochen."
+                        )
+                      ])
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("li", { staticClass: "timeline-inverted" }, [
+                  _c("div", { staticClass: "timeline-image" }, [
+                    _c("img", {
+                      staticClass: "rounded-circle img-fluid",
+                      attrs: {
+                        src: "/assets/img/about-geniessen.jpg",
+                        alt: "frisch zubereitetes Gericht"
+                      }
+                    })
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "timeline-panel" }, [
+                    _c("div", { staticClass: "timeline-heading" }, [
+                      _c("h4", [_vm._v("4. Genießen")])
+                    ]),
+                    _vm._v(" "),
+                    _c("div", { staticClass: "timeline-body" }, [
+                      _c("p", { staticClass: "text-muted" }, [
+                        _vm._v(
+                          "Genieß dein selbstgekochtes Dinner und nimm gleichzeitig ab."
+                        )
+                      ])
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("li", { staticClass: "timeline-inverted" }, [
+                  _c("div", { staticClass: "timeline-image" }, [
+                    _c("h4", [
+                      _vm._v("Endlich\n                                    "),
+                      _c("br"),
+                      _vm._v(
+                        "Ziel erreicht!\n                                    "
+                      ),
+                      _c("br"),
+                      _c("img", {
+                        staticClass: "heart-icon",
+                        attrs: {
+                          src: "/assets/img/heart-solid.svg",
+                          alt: "Hey new Me Love"
+                        }
+                      })
+                    ])
+                  ])
+                ])
+              ])
+            ])
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c(
+        "section",
+        { staticClass: "bg-light page-section", attrs: { id: "review" } },
+        [
+          _c("div", { staticClass: "container" }, [
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-lg-12 text-center" }, [
+                _c("h2", { staticClass: "section-heading text-uppercase" }, [
+                  _vm._v("Rezensionen")
+                ]),
+                _vm._v(" "),
+                _c("h3", { staticClass: "section-subheading text-muted" }, [
+                  _vm._v("So zufrieden sind unsere Kunden")
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-sm-4" }, [
+                _c("div", { staticClass: "review-client" }, [
+                  _c("img", {
+                    staticClass: "mx-auto rounded-circle",
+                    attrs: { src: "/assets/img/schilcher-julia.jpg", alt: "" }
+                  }),
+                  _vm._v(" "),
+                  _c("h4", [_vm._v("Julia Schilcher")]),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "text-muted" }, [
+                    _vm._v(
+                      "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua."
+                    )
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-sm-4" }, [
+                _c("div", { staticClass: "review-client" }, [
+                  _c("img", {
+                    staticClass: "mx-auto rounded-circle",
+                    attrs: { src: "/assets/img/melle-thomas.jpg", alt: "" }
+                  }),
+                  _vm._v(" "),
+                  _c("h4", [_vm._v("Thomas Melle")]),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "text-muted" }, [
+                    _vm._v(
+                      "Accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit."
+                    )
+                  ])
+                ])
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "col-sm-4" }, [
+                _c("div", { staticClass: "review-client" }, [
+                  _c("img", {
+                    staticClass: "mx-auto rounded-circle",
+                    attrs: { src: "/assets/img/schuhbert-corinna.jpg", alt: "" }
+                  }),
+                  _vm._v(" "),
+                  _c("h4", [_vm._v("Corinna Schuhbert")]),
+                  _vm._v(" "),
+                  _c("p", { staticClass: "text-muted" }, [
+                    _vm._v(
+                      "At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet."
+                    )
+                  ])
+                ])
+              ])
+            ])
+          ])
+        ]
+      ),
+      _vm._v(" "),
+      _c(
+        "section",
+        { staticClass: "page-section", attrs: { id: "newsletter" } },
+        [
+          _c("div", { staticClass: "container" }, [
+            _c("div", { staticClass: "row" }, [
+              _c("div", { staticClass: "col-lg-12 text-center" }, [
+                _c("h2", { staticClass: "section-heading text-uppercase" }, [
+                  _vm._v("Newsletter")
+                ]),
+                _vm._v(" "),
+                _c("h3", { staticClass: "section-subheading" }, [
+                  _vm._v(
+                    "Immer auf dem neuesten Stand. Erhalte regelmäßig News von uns."
+                  )
+                ]),
+                _vm._v(" "),
+                _c(
+                  "a",
+                  {
+                    staticClass:
+                      "btn btn-primary btn-xl text-uppercase js-scroll-trigger",
+                    attrs: { href: "#services" }
+                  },
+                  [_vm._v("Newsletter bestellen")]
+                )
+              ])
+            ])
+          ])
+        ]
+      )
     ])
   }
 ]
@@ -56683,6 +57340,75 @@ window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 //     cluster: process.env.MIX_PUSHER_APP_CLUSTER,
 //     encrypted: true
 // });
+
+/***/ }),
+
+/***/ "./resources/js/components/Footer.vue":
+/*!********************************************!*\
+  !*** ./resources/js/components/Footer.vue ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _Footer_vue_vue_type_template_id_61a7c374___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Footer.vue?vue&type=template&id=61a7c374& */ "./resources/js/components/Footer.vue?vue&type=template&id=61a7c374&");
+/* harmony import */ var _Footer_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Footer.vue?vue&type=script&lang=js& */ "./resources/js/components/Footer.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport *//* harmony import */ var _node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../node_modules/vue-loader/lib/runtime/componentNormalizer.js */ "./node_modules/vue-loader/lib/runtime/componentNormalizer.js");
+
+
+
+
+
+/* normalize component */
+
+var component = Object(_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__["default"])(
+  _Footer_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__["default"],
+  _Footer_vue_vue_type_template_id_61a7c374___WEBPACK_IMPORTED_MODULE_0__["render"],
+  _Footer_vue_vue_type_template_id_61a7c374___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"],
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* hot reload */
+if (false) { var api; }
+component.options.__file = "resources/js/components/Footer.vue"
+/* harmony default export */ __webpack_exports__["default"] = (component.exports);
+
+/***/ }),
+
+/***/ "./resources/js/components/Footer.vue?vue&type=script&lang=js&":
+/*!*********************************************************************!*\
+  !*** ./resources/js/components/Footer.vue?vue&type=script&lang=js& ***!
+  \*********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Footer_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/babel-loader/lib??ref--4-0!../../../node_modules/vue-loader/lib??vue-loader-options!./Footer.vue?vue&type=script&lang=js& */ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Footer.vue?vue&type=script&lang=js&");
+/* empty/unused harmony star reexport */ /* harmony default export */ __webpack_exports__["default"] = (_node_modules_babel_loader_lib_index_js_ref_4_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Footer_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__["default"]); 
+
+/***/ }),
+
+/***/ "./resources/js/components/Footer.vue?vue&type=template&id=61a7c374&":
+/*!***************************************************************************!*\
+  !*** ./resources/js/components/Footer.vue?vue&type=template&id=61a7c374& ***!
+  \***************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Footer_vue_vue_type_template_id_61a7c374___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../node_modules/vue-loader/lib??vue-loader-options!./Footer.vue?vue&type=template&id=61a7c374& */ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/Footer.vue?vue&type=template&id=61a7c374&");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "render", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Footer_vue_vue_type_template_id_61a7c374___WEBPACK_IMPORTED_MODULE_0__["render"]; });
+
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return _node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_node_modules_vue_loader_lib_index_js_vue_loader_options_Footer_vue_vue_type_template_id_61a7c374___WEBPACK_IMPORTED_MODULE_0__["staticRenderFns"]; });
+
+
 
 /***/ }),
 

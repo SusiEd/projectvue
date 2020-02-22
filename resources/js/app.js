@@ -10,21 +10,21 @@ import auth from './auth'
 import router from './router'
 
 // Set Vue globally
-window.Vue = Vue
+window.Vue = Vue;
 
 // Set Vue router
-Vue.router = router
-Vue.use(VueRouter)
+Vue.router = router;
+Vue.use(VueRouter);
 
 // Set Vue authentication
-Vue.use(VueAxios, axios)
+Vue.use(VueAxios, axios);
 
 //axios.defaults.baseURL = `${process.env.MIX_APP_URL}/api/
 axios.defaults.baseURL = 'http://127.0.0.1:8000/api/';
 Vue.use(VueAuth, auth);
 
 // Load Index
-Vue.component('index', Index)
+Vue.component('index', Index);
 const app = new Vue({
     el: '#app',
     router
