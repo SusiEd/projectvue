@@ -36,3 +36,5 @@ Route::prefix('auth')->group(function () {
 
 
 
+// Posts
+Route::get('/blog', 'PostController@index' ); // shows all Posts at Blog Page

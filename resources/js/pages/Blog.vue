@@ -1,5 +1,5 @@
 <template>
-    <body id="page-top">
+    <div id="page-top">
 
     <!-- Header -->
     <header class="masthead-blog">
@@ -41,25 +41,26 @@
 
 
         <!-- Post -->
-        <div class="row">
+        <div v-for="post in posts" class="row">
             <div class="col-md-7">
                 <a href="#">
                     <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt="">
                 </a>
                 <div class="text-muted">
-                    Posted on January 1, 2017 by
+                    Erstellt am {{ post.created_at }} von {{ post.user.name }}
                     <a href="#">Start Bootstrap</a>
                 </div>
             </div>
             <div class="col-md-5">
-                <h3>Project One</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde.</p>
+                <h3>{{ post.title }}</h3>
+                <p>{{ post.content }}</p>
                 <a class="btn btn-primary" href="#">Read More &rarr;</a>
             </div>
+            <hr>
         </div>
         <!-- /.row -->
 
-        <hr>
+
 
 
         <!-- Pagination -->
@@ -90,5 +91,27 @@
     </div>
     <!-- /.container -->
 
-    </body>
+    </div>
 </template>
+<script>
+    export default {
+        data() {
+            return {
+                posts: []
+
+            }
+        },
+        mounted() {
+            this.fetchPosts();
+        },
+        methods: {
+            fetchPosts() {
+                axios
+                    .get('/blog')
+                    .then(({ data }) => {
+                    this.posts = data
+                })
+            }
+        }
+    }
+</script>
