@@ -602,3 +602,68 @@ ul.social-buttons li a img {
 ul.social-buttons li a:active, ul.social-buttons li a:focus, ul.social-buttons li a:hover {
     background-color: #cbd73e;
 }
+
+
+/* -------------------- Blog --------------------*/
+/* ------------------------------------------------*/
+
+.logoblog {
+    padding-bottom: 30px;
+    width: 150px;
+}
+
+header.masthead-blog {
+    text-align: center;
+    color: white;
+    background-image: url("../assets/img/heynewme-blog-bg.jpg");
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: center center;
+    background-size: cover;
+}
+
+header.masthead-blog .intro-text {
+    padding-bottom: 70px;
+}
+
+header.masthead-blog .intro-text .intro-lead-in {
+    font-size: 22px;
+    line-height: 22px;
+    margin-bottom: 25px;
+    font-family: 'Roboto', Arial, sans-serif;
+}
+
+header.masthead-blog .intro-text .intro-heading {
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 50px;
+}
+
+@media (min-width: 768px) {
+    header.masthead-blog .intro-text {
+
+    }
+    header.masthead-blog .intro-text .intro-lead-in {
+        font-size: 40px;
+        line-height: 40px;
+    }
+    header.masthead-blog .intro-text .intro-heading {
+        font-size: 75px;
+        font-weight: 700;
+        line-height: 75px;
+    }
+}
+
+.blogsection {
+    margin: 60px 0;
+    text-align: center;
+}
+
+.paginationcolor li a{
+    color: #000000;
+}
+
+.bd-subnavbar {
+    background-color: #cbd73e;
+    text-align: center;
+}

@@ -41098,7 +41098,183 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [_c("h1", [_vm._v("Blog")])])
+    return _c("body", { attrs: { id: "page-top" } }, [
+      _c("header", { staticClass: "masthead-blog" }, [
+        _c("div", { staticClass: "container" }, [
+          _c("div", { staticClass: "intro-text" }, [
+            _c("img", {
+              staticClass: "logoblog",
+              attrs: { src: "/assets/img/logo-heynewme.svg", alt: "" }
+            }),
+            _vm._v(" "),
+            _c("div", { staticClass: "intro-lead-in" }, [
+              _vm._v("Diätkochboxen")
+            ]),
+            _vm._v(" "),
+            _c("h1", { staticClass: "intro-heading text-uppercase" }, [
+              _vm._v("Blog")
+            ])
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("nav", { staticClass: "bd-subnavbar pt-2 pb-3 pb-md-2" }, [
+        _c("div", { staticClass: "container" }, [
+          _c("div", { staticClass: "row justify-content-md-center" }, [
+            _c("div", { staticClass: "col-md-auto" }, [
+              _c(
+                "nav",
+                { staticClass: "nav mx-auto d-flex align-items-center" },
+                [
+                  _c(
+                    "a",
+                    {
+                      staticClass:
+                        "text-dark py-1 mr-3 fw-500 text-decoration-none",
+                      attrs: { href: "" }
+                    },
+                    [_vm._v("Alle Posts")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "a",
+                    { staticClass: "text-dark py-1 mr-3", attrs: { href: "" } },
+                    [_vm._v("Rezepte")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "a",
+                    { staticClass: "text-dark py-1 mr-3", attrs: { href: "" } },
+                    [_vm._v("Tipps")]
+                  ),
+                  _vm._v(" "),
+                  _c(
+                    "a",
+                    { staticClass: "text-dark py-1", attrs: { href: "" } },
+                    [_vm._v("Diäten")]
+                  )
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "col-md-auto" }, [
+              _c("div", { staticClass: "md-form" }, [
+                _c("input", {
+                  staticClass: "form-control",
+                  attrs: {
+                    type: "text",
+                    placeholder: "Suche",
+                    "aria-label": "Search"
+                  }
+                })
+              ])
+            ])
+          ])
+        ])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "container" }, [
+        _c("div", { staticClass: "blogsection" }, [
+          _c("p", [
+            _vm._v(
+              "Alles Wissenswerte zu gesunder Ernährung: Kostenlose Ernährungspläne, Rezepte, Videos, Ebooks, wissenschaftliche Ratgeber sowie Tipps und Tricks rund um die Ernährungsziele Abnehmen, Muskelaufbau, Clean Eating, Definition und Fettabbau."
+            )
+          ])
+        ]),
+        _vm._v(" "),
+        _c("div", { staticClass: "row" }, [
+          _c("div", { staticClass: "col-md-7" }, [
+            _c("a", { attrs: { href: "#" } }, [
+              _c("img", {
+                staticClass: "img-fluid rounded mb-3 mb-md-0",
+                attrs: { src: "http://placehold.it/700x300", alt: "" }
+              })
+            ]),
+            _vm._v(" "),
+            _c("div", { staticClass: "text-muted" }, [
+              _vm._v(
+                "\n                Posted on January 1, 2017 by\n                "
+              ),
+              _c("a", { attrs: { href: "#" } }, [_vm._v("Start Bootstrap")])
+            ])
+          ]),
+          _vm._v(" "),
+          _c("div", { staticClass: "col-md-5" }, [
+            _c("h3", [_vm._v("Project One")]),
+            _vm._v(" "),
+            _c("p", [
+              _vm._v(
+                "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium veniam exercitationem expedita laborum at voluptate. Labore, voluptates totam at aut nemo deserunt rem magni pariatur quos perspiciatis atque eveniet unde."
+              )
+            ]),
+            _vm._v(" "),
+            _c("a", { staticClass: "btn btn-primary", attrs: { href: "#" } }, [
+              _vm._v("Read More →")
+            ])
+          ])
+        ]),
+        _vm._v(" "),
+        _c("hr"),
+        _vm._v(" "),
+        _c(
+          "ul",
+          { staticClass: "pagination justify-content-center paginationcolor" },
+          [
+            _c("li", { staticClass: "page-item" }, [
+              _c(
+                "a",
+                {
+                  staticClass: "page-link",
+                  attrs: { href: "#", "aria-label": "Previous" }
+                },
+                [
+                  _c("span", { attrs: { "aria-hidden": "true" } }, [
+                    _vm._v("«")
+                  ]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "sr-only" }, [_vm._v("Previous")])
+                ]
+              )
+            ]),
+            _vm._v(" "),
+            _c("li", { staticClass: "page-item" }, [
+              _c("a", { staticClass: "page-link", attrs: { href: "#" } }, [
+                _vm._v("1")
+              ])
+            ]),
+            _vm._v(" "),
+            _c("li", { staticClass: "page-item" }, [
+              _c("a", { staticClass: "page-link", attrs: { href: "#" } }, [
+                _vm._v("2")
+              ])
+            ]),
+            _vm._v(" "),
+            _c("li", { staticClass: "page-item" }, [
+              _c("a", { staticClass: "page-link", attrs: { href: "#" } }, [
+                _vm._v("3")
+              ])
+            ]),
+            _vm._v(" "),
+            _c("li", { staticClass: "page-item" }, [
+              _c(
+                "a",
+                {
+                  staticClass: "page-link",
+                  attrs: { href: "#", "aria-label": "Next" }
+                },
+                [
+                  _c("span", { attrs: { "aria-hidden": "true" } }, [
+                    _vm._v("»")
+                  ]),
+                  _vm._v(" "),
+                  _c("span", { staticClass: "sr-only" }, [_vm._v("Next")])
+                ]
+              )
+            ])
+          ]
+        )
+      ])
+    ])
   }
 ]
 render._withStripped = true
