@@ -1,4 +1,4 @@
-@import url(https://fonts.googleapis.com/css?family=Nunito);@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Roboto);@charset "UTF-8";
 
 /*!
  * Bootstrap v4.4.1 (https://getbootstrap.com/)
@@ -11463,7 +11463,7 @@ img::-moz-selection {
 header.masthead {
   text-align: center;
   color: white;
-  background-image: url(/images/heynewme-bg.jpg?a5f69cfa8933382d56c85a77daeb7e8f);
+  background-image: url("/assets/img/heynewme-bg.jpg");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -11906,7 +11906,7 @@ header.masthead .intro-text .intro-heading {
 
 section#newsletter {
   /*background-color: #212529;*/
-  background-image: url(/images/newsletter-image.jpg?261ce7328f043c07ec9471e5a7943699);
+  background-image: url("/assets/img/newsletter-image.jpg");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;
@@ -11975,7 +11975,7 @@ ul.social-buttons li a:hover {
 header.masthead-blog {
   text-align: center;
   color: white;
-  background-image: url(/images/heynewme-blog-bg.jpg?17a0fe8ae396cad5e4d65dbf142e7970);
+  background-image: url("/assets/img/heynewme-blog-bg.jpg");
   background-repeat: no-repeat;
   background-attachment: scroll;
   background-position: center center;

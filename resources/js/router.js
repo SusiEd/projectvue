@@ -2,6 +2,7 @@ import VueRouter from 'vue-router'
 // Pages
 import Home from './pages/Home'
 import Blog from './pages/Blog'
+import NotFound from './pages/NotFound'
 import Register from './pages/Register'
 import Login from './pages/Login'
 import Dashboard from './pages/user/Dashboard'
@@ -28,11 +29,15 @@ const routes = [
         }
     },
     {
+        path: '*',
+        component: NotFound
+    },
+    {
         path: '/register',
         name: 'register',
         component: Register,
         meta: {
-            auth: false // only see, wenn you are not logged
+            auth: false // only see, if you are not logged
         }
     },
     {
@@ -40,7 +45,7 @@ const routes = [
         name: 'login',
         component: Login,
         meta: {
-            auth: false // only see, wenn you are not logged
+            auth: false // only see, if you are not logged
         }
     },
     // USER ROUTES
