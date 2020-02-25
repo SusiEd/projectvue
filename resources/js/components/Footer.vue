@@ -3,6 +3,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
+            <hr>
             <div class="row align-items-center">
                 <div class="col-md-4">
                     <span class="copyright">&copy; 2020 Hey New Me</span>

@@ -47,7 +47,7 @@
                     <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt="">
                 </a>
                 <div class="text-muted">
-                    Erstellt am {{ post.created_at }} von {{ post.user.name }}
+                    Erstellt am {{ post.created_at | moment("DD.MM.YY") }} von {{ post.user.name }}
                     <a href="#">Start Bootstrap</a>
                 </div>
             </div>
@@ -107,7 +107,7 @@
         methods: {
             fetchPosts() {
                 axios
-                    .get('/blog')
+                    .get('/posts')
                     .then(({ data }) => {
                     this.posts = data
                 })

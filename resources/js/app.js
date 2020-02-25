@@ -12,6 +12,9 @@ import router from './router'
 // Set Vue globally
 window.Vue = Vue;
 
+// Set Vue moment
+Vue.use(require('vue-moment'));
+
 // Set Vue router
 Vue.router = router;
 Vue.use(VueRouter);
