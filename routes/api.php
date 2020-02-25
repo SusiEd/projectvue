@@ -37,9 +37,11 @@ Route::prefix('auth')->group(function () {
 
 
 // Posts
-// Route::get('/blog', 'PostController@index'); // shows all Posts at Blog Page
-
-// Posts
 Route::prefix('posts')->group(function () {
-    Route::get('/', 'PostController@index');
+    Route::get('/', 'PostController@index'); // shows all Posts at Blog Page
+  //  Route::get('post/{id}', 'PostController@index');
+
+
+
+
 });

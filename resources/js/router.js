@@ -1,7 +1,7 @@
 import VueRouter from 'vue-router'
 // Pages
 import Home from './pages/Home'
-import Blog from './pages/Blog'
+import Blog from './pages/PostsPage'
 import NotFound from './pages/NotFound'
 import Register from './pages/Register'
 import Login from './pages/Login'
