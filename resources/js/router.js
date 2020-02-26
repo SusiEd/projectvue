@@ -2,7 +2,6 @@ import VueRouter from 'vue-router'
 // Pages
 import Home from './pages/Home'
 import Blog from './pages/PostsPage'
-import NotFound from './pages/NotFound'
 import Register from './pages/Register'
 import Login from './pages/Login'
 import Dashboard from './pages/user/Dashboard'
@@ -29,10 +28,6 @@ const routes = [
         }
     },
     {
-        path: '*',
-        component: NotFound
-    },
-    {
         path: '/register',
         name: 'register',
         component: Register,
@@ -52,7 +47,6 @@ const routes = [
     {
         path: '/dashboard',
         name: 'dashboard',
-        redirect: '/dashboard/test',
         component: Dashboard,
         meta: {
             //auth: true
@@ -60,6 +54,11 @@ const routes = [
 
     }, children:
         [
+            {
+                path: '/dashboard',
+                name: 'dashboard',
+                component: Dashboard
+            },
             {
                 path: '/dashboard/test',
                 name: 'dashboard.test',
@@ -76,13 +75,17 @@ const routes = [
     {
         path: '/admin',
         name: 'admin.dashboard',
-        redirect: '/admin/test',
         component: AdminDashboard,
         meta: {
             //auth: true
             auth: {roles: 2, redirect: {name: 'login'}, forbiddenRedirect: '/403'}
         }, children:
             [
+                {
+                    path: '/admin',
+                    name: 'admin.dashboard',
+                    component: AdminDashboard
+                },
                 {
                     path: '/admin/test',
                     name: 'admin.test',
