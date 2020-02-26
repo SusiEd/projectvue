@@ -9,6 +9,8 @@ import Test from './pages/Test'
 import User from './pages/User'
 import Todo from './pages/Todo'
 import AdminDashboard from './pages/admin/AdminDashboard'
+import AllPosts from './pages/admin/AllPosts'
+
 // Routes
 const routes = [
     {
@@ -101,6 +103,11 @@ const routes = [
                     name: 'admin.todo',
                     component: Todo
                 },
+                {
+                    path: '/admin/all-posts',
+                    name: 'admin.all-posts',
+                    component: AllPosts
+                }
             ]
     },
     // wildcard

@@ -27,21 +27,25 @@ Route::prefix('auth')->group(function () {
     Route::middleware('auth:api')->group(function () {
         // Get user info
         Route::get('user', 'AuthController@user');
+
         // Logout user from application
         Route::post('logout', 'AuthController@logout');
         Route::get('getUsers', 'UserController@index');
         Route::put('putUser', 'UserController@putUser');
+        Route::get('getPosts', 'PostController@index');
     });
 });
 
 
 
 // Posts
-Route::prefix('posts')->group(function () {
-    Route::get('/', 'PostController@index'); // shows all Posts at Blog Page
-  //  Route::get('post/{id}', 'PostController@index');
+Route::get('posts', 'PostController@index');
+    Route::prefix('posts')->group(function () {
+        Route::middleware('auth:api')->group(function() {
+
+        });
+    });
 
 
 
 
-});

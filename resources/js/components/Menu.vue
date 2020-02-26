@@ -49,7 +49,8 @@
                     admin: [
                         { name: 'Test', path: 'admin.test' },
                         { name: 'User', path: 'admin.user' },
-                        { name: 'Todoliste', path: 'admin.todo' }
+                        { name: 'Todoliste', path: 'admin.todo' },
+                        { name: 'Alle Posts', path: 'admin.all-posts' }
                     ]
                 }
             }

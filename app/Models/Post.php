@@ -3,6 +3,9 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
+use App\Models\User;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class Post extends Model
 {
@@ -12,8 +15,8 @@ class Post extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function setTitleAttribute($value)
-    {
-        $this->attributes['title'] = $value;
-    }
+  //  public function setTitleAttribute($value)
+   //{
+      //  $this->attributes['title'] = $value;
+   // }
 }
