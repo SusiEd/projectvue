@@ -107,7 +107,7 @@
         methods: {
             fetchPosts() {
                 axios
-                    .get('/posts') // Verbindung zu Laravel und so zur Datenbank
+                    .get('/posts') // Verbindung zu Laravel herstellen => Zugang Datenbank
                     .then(({ data }) => {
                         this.posts = data
                     })

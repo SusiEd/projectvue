@@ -40,11 +40,13 @@ Route::prefix('auth')->group(function () {
 
 // Posts
 Route::get('posts', 'PostController@index');
-    Route::prefix('posts')->group(function () {
-        Route::middleware('auth:api')->group(function() {
 
-        });
-    });
+
+  //  Route::prefix('posts')->group(function () {
+//      Route::middleware('auth:api')->group(function() {
+
+   //     });
+//  });
 
 
 
