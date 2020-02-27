@@ -33,7 +33,7 @@
                                 <input type="file" id="postPic" name="image">
                             </div>-->
 
-                            <a class="btn btn-primary">Post bearbeiten</a>
+                            <button @click="updatePost(post.id)" type="submit" class="btn btn-primary">Update Post</button>
                         </form>
                     </div>
                 </div>
@@ -55,6 +55,16 @@
                     this.post = response.data;
                     // console.log(response.data);
                 });
+        },
+        methods: {
+            updatePost() {
+                this.axios
+                    .put('posts/update/' + this.$route.params.id, this.post)
+                    .then((response) => {
+                        this.$router.push({name: 'admin.all-posts'});
+                    });
+            }
         }
+
     }
 </script>

@@ -33,4 +33,18 @@ class Post extends Model
     }
 
 
+    protected function updateFromArray($data) {
+        $user_id = Auth::user()->id;
+
+
+        $this->title = $data['title'];
+        $this->content = $data['content'];
+        $this->user_id = $user_id;
+
+        $this->save();
+
+        return $this;
+    }
+
+
 }

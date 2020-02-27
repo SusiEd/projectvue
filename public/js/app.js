@@ -3810,6 +3810,17 @@ __webpack_require__.r(__webpack_exports__);
     this.axios.get('posts/edit/' + this.$route.params.id).then(function (response) {
       _this.post = response.data; // console.log(response.data);
     });
+  },
+  methods: {
+    updatePost: function updatePost() {
+      var _this2 = this;
+
+      this.axios.put('posts/update/' + this.$route.params.id, this.post).then(function (response) {
+        _this2.$router.push({
+          name: 'admin.all-posts'
+        });
+      });
+    }
   }
 });
 
@@ -43019,9 +43030,19 @@ var render = function() {
                 })
               ]),
               _vm._v(" "),
-              _c("a", { staticClass: "btn btn-primary" }, [
-                _vm._v("Post bearbeiten")
-              ])
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-primary",
+                  attrs: { type: "submit" },
+                  on: {
+                    click: function($event) {
+                      return _vm.updatePost(_vm.post.id)
+                    }
+                  }
+                },
+                [_vm._v("Update Post")]
+              )
             ])
           ])
         ])
