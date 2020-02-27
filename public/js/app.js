@@ -3641,8 +3641,8 @@ __webpack_require__.r(__webpack_exports__);
       }).then(function (response) {
         console.log(response);
 
-        _this.$router.to({
-          name: 'admin.add-post'
+        _this.$router.push({
+          name: 'admin.all-posts'
         });
       })["catch"](function (error) {
         console.log(error);

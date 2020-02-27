@@ -59,7 +59,7 @@
                     user_id: this.user_id
                 }).then((response) => {
                     console.log(response);
-                    this.$router.push({name: 'admin.all-posts'})
+                    this.$router.to({name: 'admin.add-post'})
                 }).catch((error) => {
                     console.log(error);
                 });
