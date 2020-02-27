@@ -50,7 +50,8 @@
                         { name: 'Test', path: 'admin.test' },
                         { name: 'User', path: 'admin.user' },
                         { name: 'Todoliste', path: 'admin.todo' },
-                        { name: 'Alle Posts', path: 'admin.all-posts' }
+                        { name: 'Alle Posts', path: 'admin.all-posts' },
+                        { name: 'Add Post', path: 'admin.add-post'}
                     ]
                 }
             }

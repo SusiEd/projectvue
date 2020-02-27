@@ -32,21 +32,24 @@ Route::prefix('auth')->group(function () {
         Route::post('logout', 'AuthController@logout');
         Route::get('getUsers', 'UserController@index');
         Route::put('putUser', 'UserController@putUser');
-        Route::get('getPosts', 'PostController@index');
+
+
     });
 });
 
 
 
 // Posts
-Route::get('posts', 'PostController@index');
+Route::prefix('posts')->group(function () {      // http://localhost:8000/api/posts/
+    Route::get('/', 'PostController@index');
+        Route::middleware('auth:api')->group(function () {
+            Route::post('add', 'PostController@store'); //// http://localhost:8000/api/posts/add
+
+        });
 
 
-  //  Route::prefix('posts')->group(function () {
-//      Route::middleware('auth:api')->group(function() {
 
-   //     });
-//  });
+});
 
 
 

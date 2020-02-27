@@ -49,7 +49,7 @@
         methods: {
             fetchPosts() {
                 axios
-                    .get('auth/getPosts')
+                    .get('/posts')
                     .then(({ data }) => {
                         this.posts = data
                     })

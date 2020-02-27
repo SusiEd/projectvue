@@ -11,12 +11,26 @@ class Post extends Model
 {
     protected $fillable = ['title', 'content'];
 
+
+    public static function createFromArray($data)
+    {
+
+        $user_id = Auth::user()->id;
+
+        $post = new Post();
+        $post -> title = $data['title'];
+        $post -> content = $data['content'];
+        $post -> user_id =  $user_id;
+
+        $post->save();
+
+        return $data;
+
+    }
+
     public function user() {
         return $this->belongsTo(User::class);
     }
 
-  //  public function setTitleAttribute($value)
-   //{
-      //  $this->attributes['title'] = $value;
-   // }
+
 }
