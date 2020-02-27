@@ -3621,6 +3621,20 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -42494,7 +42508,7 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("div", [_c("h1", [_vm._v("User Hallo")])])
+    return _c("div", [_c("h1", [_vm._v("User ")])])
   }
 ]
 render._withStripped = true
@@ -42560,9 +42574,25 @@ var render = function() {
             _vm._v(" "),
             _c("td", [_vm._v(_vm._s(post.title))]),
             _vm._v(" "),
+            _c("td", [_vm._v("Bild Platzhalter")]),
+            _vm._v(" "),
+            _c("td", [_vm._v("Kategorie")]),
+            _vm._v(" "),
             _c("td", [
-              _vm._v(_vm._s(_vm._f("moment")(post.created_at, "DD.MM.YYYY")))
-            ])
+              _vm._v(
+                _vm._s(_vm._f("moment")(post.created_at, "DD.MM.YYYY, h:mm"))
+              )
+            ]),
+            _vm._v(" "),
+            _c("td", [
+              _vm._v(
+                _vm._s(_vm._f("moment")(post.updated_at, "DD.MM.YYYY, h:mm"))
+              )
+            ]),
+            _vm._v(" "),
+            _vm._m(1, true),
+            _vm._v(" "),
+            _vm._m(2, true)
           ])
         }),
         0
@@ -42583,8 +42613,42 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("th", { attrs: { scope: "col" } }, [_vm._v("Titel")]),
         _vm._v(" "),
-        _c("th", { attrs: { scope: "col" } }, [_vm._v("Erstellt am")])
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Bild")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Kategorie")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Erstellt am")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Geändert am")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Aktionen")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } })
       ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("td", [
+      _c(
+        "button",
+        { staticClass: "btn btn-primary", attrs: { type: "button" } },
+        [_vm._v("Bearbeiten")]
+      )
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("td", [
+      _c(
+        "button",
+        { staticClass: "btn btn-secondary", attrs: { type: "button" } },
+        [_vm._v("Löschen")]
+      )
     ])
   }
 ]
