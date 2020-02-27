@@ -18,7 +18,7 @@
             </tr>
             </thead>
             <tbody>
-            <tr v-for="post in posts">
+            <tr v-for="post in posts" :key="post.id">
                 <td>{{ post.id }}</td>
                 <td>{{ post.user.name }}</td>
                 <td>{{ post.title }}</td>
@@ -27,8 +27,8 @@
                 <td>{{ post.created_at | moment("DD.MM.YYYY, h:mm") }}</td>
                 <td>{{ post.updated_at | moment("DD.MM.YYYY, h:mm") }}</td>
                 <!--<td>tags</td>-->
-                <td><button type="button" class="btn btn-primary">Bearbeiten</button>
-                </td>
+                <td><router-link :to="{name: 'admin.edit-post', params: { id: post.id }}" class="btn btn-primary">Edit
+                </router-link></td>
                 <td><button type="button" class="btn btn-secondary">Löschen</button></td>
             </tr>
             </tbody>

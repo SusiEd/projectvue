@@ -3,12 +3,12 @@
         <div class="row justify-content-md-center">
             <div class="col-10">
                 <div class="card card-default">
-                    <div class="card-header">Neuen Post erstellen</div>
+                    <div class="card-header">Post Nr {{ post.id }}</div>
                     <div class="card-body">
                         <form method="post">
                             <div class="form-group">
                                 <label for="postTitle">Titel</label>
-                                <input type="text" class="form-control" id="postTitle" placeholder="Titel" v-model="title">
+                                <input type="text" class="form-control" id="postTitle" placeholder="Titel" v-model="post.title">
                             </div>
 
                            <!-- <div class="form-group">
@@ -25,7 +25,7 @@
 
                             <div class="form-group">
                                 <label for="postContent">Text</label>
-                                <textarea class="form-control" id="postContent" rows="5" placeholder="Hier bitte Text einfügen" v-model="content"></textarea>
+                                <textarea class="form-control" id="postContent" rows="5" placeholder="Hier bitte Text einfügen" v-model="post.content"></textarea>
                             </div>
 
                            <!-- <div class="form-group">
@@ -33,7 +33,7 @@
                                 <input type="file" id="postPic" name="image">
                             </div>-->
 
-                            <a @click.prevent="createNewPost" class="btn btn-primary">Post erstellen</a>
+                            <a class="btn btn-primary">Post bearbeiten</a>
                         </form>
                     </div>
                 </div>
@@ -43,28 +43,18 @@
 </template>
 <script>
     export default {
-        name: "AddPost", //Component
-        data: function() {
+        data() {
             return {
-                title: [],
-                content: [],
-                user_id: this.$route.params.id
+                post: {}
             }
         },
-        methods: {
-            createNewPost() {
-                axios.post('posts/add', {
-                    title : this.title,
-                    content: this.content,
-                    user_id: this.user_id
-                }).then((response) => {
-                    console.log(response);
-                    this.$router.to({name: 'admin.add-post'})
-                }).catch((error) => {
-                    console.log(error);
+        created() {
+            this.axios
+                .get('posts/edit/' + this.$route.params.id)
+                .then((response) => {
+                    this.post = response.data;
+                    // console.log(response.data);
                 });
-            },
-
-        },
+        }
     }
 </script>

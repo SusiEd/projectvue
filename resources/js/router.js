@@ -11,6 +11,7 @@ import Todo from './pages/Todo'
 import AdminDashboard from './pages/admin/AdminDashboard'
 import AllPosts from './pages/admin/AllPosts'
 import AddPost from './pages/admin/AddPost'
+import EditPost from './pages/admin/EditPost'
 
 // Routes
 const routes = [
@@ -114,6 +115,11 @@ const routes = [
                     name: 'admin.add-post',
                     component: AddPost
                 },
+                {
+                    path: '/admin/edit/:id',
+                    name: 'admin.edit-post',
+                    component: EditPost
+                }
 
             ]
     },

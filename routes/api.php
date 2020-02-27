@@ -44,7 +44,8 @@ Route::prefix('posts')->group(function () {      // http://localhost:8000/api/po
     Route::get('/', 'PostController@index');
         Route::middleware('auth:api')->group(function () {
             Route::post('add', 'PostController@store'); // http://localhost:8000/api/posts/add   Postman
-            Route::get('edit/{id}', 'PostController@edit');  // http://localhost:8000/api/posts/edit   Postman
+            Route::get('edit/{id}', 'PostController@edit');
+
         });
 
 
