@@ -72,4 +72,13 @@ class PostController extends Controller
 
         return response()->json('Der Post wurde erfolgreich gelöscht');
     }
+
+    public function getUserPosts()
+    {
+        auth()->id();
+        $posts = Post::with('user')->where('user_id', auth()->id())->orderBy('created_at', 'desc')->get();
+        return response()->json($posts);
+
+
+    }
 }

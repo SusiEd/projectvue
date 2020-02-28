@@ -43,7 +43,8 @@
                     // LOGGED USER
                     user: [
                         { name: 'Test', path: 'dashboard.test' },
-                        { name: 'User', path: 'dashboard.user' }
+                        { name: 'User', path: 'dashboard.user' },
+                        { name: 'Meine Posts', path: 'dashboard.my-posts' }
                     ],
                     // LOGGED ADMIN
                     admin: [

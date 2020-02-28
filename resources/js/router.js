@@ -7,6 +7,7 @@ import Login from './pages/Login'
 import Dashboard from './pages/user/Dashboard'
 import Test from './pages/Test'
 import User from './pages/User'
+import MyPosts from './pages/user/MyPosts'
 import Todo from './pages/Todo'
 import AdminDashboard from './pages/admin/AdminDashboard'
 import AllPosts from './pages/admin/AllPosts'
@@ -72,6 +73,11 @@ const routes = [
                 path: '/dashboard/user',
                 name: 'dashboard.user',
                 component: User
+            },
+            {
+                path: '/dashboard/my-posts',
+                name: 'dashboard.my-posts',
+                component: MyPosts
             }
         ]
     },
