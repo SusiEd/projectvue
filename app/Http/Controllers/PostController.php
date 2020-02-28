@@ -64,14 +64,12 @@ class PostController extends Controller
         return response()->json('Post wurde erfolgreich upgedated');
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function destroy($id)
     {
-        //
+        $post = Post::find($id);
+        $post->delete();
+
+        return response()->json('Der Post wurde erfolgreich gelöscht');
     }
 }

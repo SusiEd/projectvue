@@ -46,6 +46,7 @@ Route::prefix('posts')->group(function () {      // http://localhost:8000/api/po
             Route::post('add', 'PostController@store'); // http://localhost:8000/api/posts/add   Postman
             Route::get('edit/{id}', 'PostController@edit');
             Route::put('update/{id}', 'PostController@update');
+            Route::delete('/delete/{id}', 'PostController@destroy');
 
         });
 
