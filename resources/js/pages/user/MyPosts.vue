@@ -29,8 +29,7 @@
                 <!--<td>tags</td>-->
                 <td><router-link :to="{name: 'dashboard.edit-post', params: { id: post.id }}" class="btn btn-primary">Bearbeiten
                 </router-link></td>
-                <td><button class="btn btn-secondary">Löschen</button></td>
-                <!--<td><button class="btn btn-secondary" @click="deletePost(post.id)">Löschen</button></td>-->
+                <td><button class="btn btn-secondary" @click="deletePost(post.id)">Löschen</button></td>
             </tr>
             </tbody>
         </table>
@@ -55,6 +54,14 @@
                     .then(({ data }) => {
                         this.posts = data
                     })
+            },
+            deletePost(id) {
+                axios
+                    .delete('posts/userPost/delete/' + id)
+                    .then(response => {
+                        let i = this.posts.map(item => item.id).indexOf(id);
+                        this.posts.splice(i, 1)
+                    });
             }
         }
     }

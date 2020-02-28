@@ -3998,7 +3998,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -4016,6 +4015,17 @@ __webpack_require__.r(__webpack_exports__);
       axios.get('posts/userPosts').then(function (_ref) {
         var data = _ref.data;
         _this.posts = data;
+      });
+    },
+    deletePost: function deletePost(id) {
+      var _this2 = this;
+
+      axios["delete"]('posts/userPost/delete/' + id).then(function (response) {
+        var i = _this2.posts.map(function (item) {
+          return item.id;
+        }).indexOf(id);
+
+        _this2.posts.splice(i, 1);
       });
     }
   }
@@ -61763,7 +61773,20 @@ var render = function() {
               1
             ),
             _vm._v(" "),
-            _vm._m(1, true)
+            _c("td", [
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-secondary",
+                  on: {
+                    click: function($event) {
+                      return _vm.deletePost(post.id)
+                    }
+                  }
+                },
+                [_vm._v("Löschen")]
+              )
+            ])
           ])
         }),
         0
@@ -61796,14 +61819,6 @@ var staticRenderFns = [
         _vm._v(" "),
         _c("th", { attrs: { scope: "col" } })
       ])
-    ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("td", [
-      _c("button", { staticClass: "btn btn-secondary" }, [_vm._v("Löschen")])
     ])
   }
 ]

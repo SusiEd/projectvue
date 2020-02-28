@@ -94,7 +94,14 @@ class PostController extends Controller
         $post = Post::find($id);
         $post->update($request->all());
 
-        return response()->json('Post wurde erfolgreich upgedated');
+        return response()->json('Update erfolgreich');
     }
 
+    public function destroyUserPost($id)
+    {
+        $post = Post::find($id);
+        $post->delete();
+
+        return response()->json('Der Post wurde erfolgreich gelöscht');
+    }
 }
