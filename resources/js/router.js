@@ -9,6 +9,7 @@ import Test from './pages/Test'
 import User from './pages/User'
 import MyPosts from './pages/user/MyPosts'
 import EditMyPost from './pages/user/EditMyPost'
+import AddMyPost from './pages/user/AddMyPost'
 import Todo from './pages/Todo'
 import AdminDashboard from './pages/admin/AdminDashboard'
 import AllPosts from './pages/admin/AllPosts'
@@ -84,6 +85,11 @@ const routes = [
                 path: '/dashboard/edit/:id',
                 name: 'dashboard.edit-post',
                 component: EditMyPost
+            },
+            {
+                path: '/dashboard/add-post',
+                name: 'dashboard.add-post',
+                component: AddMyPost
             }
 
         ]

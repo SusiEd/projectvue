@@ -104,4 +104,16 @@ class PostController extends Controller
 
         return response()->json('Der Post wurde erfolgreich gelöscht');
     }
+
+    public function storeUserPost(Request $request)
+    {
+
+        $data = $request->validate([
+            'title' => 'required|max:20',
+            'content' => 'required|max:700',
+        ]);
+
+        $post = Post::createFromArray($data);
+        return response()->json($post);
+    }
 }

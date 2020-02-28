@@ -51,6 +51,7 @@ Route::prefix('posts')->group(function () {      // http://localhost:8000/api/po
             Route::get('userPosts/edit/{id}', 'PostController@editUserPost');
             Route::put('userPost/update/{id}', 'PostController@updateUserPost');
             Route::delete('userPost/delete/{id}', 'PostController@destroyUserPost');
+            Route::post('userPost/add', 'PostController@storeUserPost');
 
         });
 
