@@ -8,12 +8,17 @@ import VueRouter from 'vue-router'
 import Index from './Index'
 import auth from './auth'
 import router from './router'
+import VueMoment from 'vue-moment'
+import moment from 'moment-timezone'
 
 // Set Vue globally
 window.Vue = Vue;
 
 // Set Vue moment
-Vue.use(require('vue-moment'));
+/*Vue.use(require('vue-moment'));*/
+Vue.use(VueMoment, {
+    moment,
+});
 
 // Set Vue router
 Vue.router = router;

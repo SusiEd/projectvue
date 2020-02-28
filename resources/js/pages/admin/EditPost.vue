@@ -33,7 +33,7 @@
                                 <input type="file" id="postPic" name="image">
                             </div>-->
 
-                            <button @click="updatePost(post.id)" type="submit" class="btn btn-primary">Update Post</button>
+                            <a @click="updatePost(post.id)" class="btn btn-primary">Update</a>
                         </form>
                     </div>
                 </div>
@@ -45,11 +45,11 @@
     export default {
         data() {
             return {
-                post: {}
+                post: []
             }
         },
         created() {
-            this.axios
+            axios
                 .get('posts/edit/' + this.$route.params.id)
                 .then((response) => {
                     this.post = response.data;
@@ -58,7 +58,7 @@
         },
         methods: {
             updatePost() {
-                this.axios
+                axios
                     .put('posts/update/' + this.$route.params.id, this.post)
                     .then((response) => {
                         this.$router.push({name: 'admin.all-posts'});

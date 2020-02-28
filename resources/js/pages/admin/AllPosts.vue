@@ -24,10 +24,10 @@
                 <td>{{ post.title }}</td>
                 <td>Bild Platzhalter</td>
                 <td>Kategorie</td>
-                <td>{{ post.created_at | moment("DD.MM.YYYY, h:mm") }}</td>
-                <td>{{ post.updated_at | moment("DD.MM.YYYY, h:mm") }}</td>
+                <td>{{ post.created_at | moment("DD.MM.YYYY, HH:MM") }}</td>
+                <td>{{ post.updated_at | moment("DD.MM.YYYY, HH:MM") }}</td>
                 <!--<td>tags</td>-->
-                <td><router-link :to="{name: 'admin.edit-post', params: { id: post.id }}" class="btn btn-primary">Edit
+                <td><router-link :to="{name: 'admin.edit-post', params: { id: post.id }}" class="btn btn-primary">Bearbeiten
                 </router-link></td>
                 <td><button type="button" class="btn btn-secondary">Löschen</button></td>
             </tr>
