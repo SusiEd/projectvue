@@ -79,6 +79,22 @@ class PostController extends Controller
         $posts = Post::with('user')->where('user_id', auth()->id())->orderBy('created_at', 'desc')->get();
         return response()->json($posts);
 
+    }
+
+  public function editUserPost($id)
+    {
+
+        $post = Post::find($id);
+        return response()->json($post);
 
     }
+
+    public function updateUserPost($id, Request $request)
+    {
+        $post = Post::find($id);
+        $post->update($request->all());
+
+        return response()->json('Post wurde erfolgreich upgedated');
+    }
+
 }

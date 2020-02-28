@@ -47,7 +47,9 @@ Route::prefix('posts')->group(function () {      // http://localhost:8000/api/po
             Route::get('edit/{id}', 'PostController@edit');
             Route::put('update/{id}', 'PostController@update');
             Route::delete('/delete/{id}', 'PostController@destroy');
-            Route::get('userPosts', 'PostController@getUserPosts');
+            Route::get('userPosts', 'PostController@getUserPosts'); // so müsste ich alle Posts von dem einen User sehen
+            Route::get('userPosts/edit/{id}', 'PostController@editUserPost');
+            Route::put('userPost/update/{id}', 'PostController@updateUserPost');
 
         });
 
