@@ -26,7 +26,7 @@
                     </div>
                     <div class="col-md-auto">
                         <div class="md-form">
-                            <input class="form-control" type="text" placeholder="Suche" aria-label="Search">
+                            <input class="form-control" type="text" placeholder="Suche" v-model="search">
                         </div>
                     </div>
                 </div>
@@ -41,7 +41,7 @@
 
 
             <!-- Post -->
-            <div v-for="post in posts" class="row">
+            <div v-for="post in filteredPosts" class="row">
                 <div class="col-md-7">
                     <a href="#">
                         <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt="">
@@ -97,7 +97,8 @@
     export default {
         data() {
             return {
-                posts: []
+                posts: [],
+                search: '',
 
             }
         },
@@ -111,6 +112,13 @@
                     .then(({ data }) => {
                         this.posts = data
                     })
+            }
+        },
+        computed: {
+            filteredPosts() {
+                return this.posts.filter((post)=>{
+                    return post.title.toLowerCase().includes(this.search.toLowerCase());
+                });
             }
         }
     }
