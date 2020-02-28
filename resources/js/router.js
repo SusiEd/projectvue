@@ -1,6 +1,7 @@
 import VueRouter from 'vue-router'
 // Pages
 import Home from './pages/Home'
+import SinglePost from './pages/SinglePost'
 import Blog from './pages/PostsPage'
 import Register from './pages/Register'
 import Login from './pages/Login'
@@ -30,6 +31,14 @@ const routes = [
         path: '/blog',
         name: 'blog',
         component: Blog,
+        meta: {
+            auth: undefined // everybody is allowed to see
+        }
+    },
+    {
+        path: '/post/:id',
+        name: 'post',
+        component: SinglePost,
         meta: {
             auth: undefined // everybody is allowed to see
         }

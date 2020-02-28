@@ -54,7 +54,8 @@
                 <div class="col-md-5">
                     <h3>{{ post.title }}</h3>
                     <p>{{ post.content }}</p>
-                    <a class="btn btn-primary" href="#">Read More &rarr;</a>
+                    <router-link :to="{name: 'post', params: { id: post.id }}" class="btn btn-primary">Read More &rarr;
+                    </router-link>
                 </div>
                 <hr>
             </div>

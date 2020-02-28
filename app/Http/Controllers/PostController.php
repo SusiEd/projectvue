@@ -35,15 +35,12 @@ class PostController extends Controller
         return response()->json($post);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function show($id)
     {
-        //
+        $post = Post::find($id);
+        return response()->json($post);
+
     }
 
 
