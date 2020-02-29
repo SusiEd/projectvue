@@ -7,23 +7,23 @@
                     <div class="card-body">
                         <div class="alert alert-danger" v-if="has_error && !success">
                             <p v-if="error == 'registration_validation_error'">Validation Errors.</p>
-                            <p v-else>Error, can not register at the moment. If the problem persists, please contact an administrator.</p>
+                            <p v-else>Fehler - Bitte alle Felder ausfüllen!</p>
                         </div>
                         <form autocomplete="off" @submit.prevent="register" v-if="!success" method="post">
                             <div class="form-group" v-bind:class="{ 'has-error': has_error && errors.name }">
                                 <label for="name">Name</label>
                                 <input type="text" id="name" class="form-control" placeholder="Name" v-model="name">
-                                <span class="help-block" v-if="has_error && errors.name">{{ errors.name }}</span>
+                                <span class="help-block" v-if="has_error && errors.name">{{ errors.name[0] }}</span>
                             </div>
                             <div class="form-group" v-bind:class="{ 'has-error': has_error && errors.email }">
                                 <label for="email">E-Mail</label>
                                 <input type="email" id="email" class="form-control" placeholder="user@example.de" v-model="email">
-                                <span class="help-block" v-if="has_error && errors.email">{{ errors.email }}</span>
+                                <span class="help-block" v-if="has_error && errors.email">{{ errors.email[0] }}</span>
                             </div>
                             <div class="form-group" v-bind:class="{ 'has-error': has_error && errors.password }">
                                 <label for="password">Passwort</label>
                                 <input type="password" id="password" class="form-control" v-model="password">
-                                <span class="help-block" v-if="has_error && errors.password">{{ errors.password }}</span>
+                                <span class="help-block" v-if="has_error && errors.password">{{ errors.password[0] }}</span>
                             </div>
                             <div class="form-group" v-bind:class="{ 'has-error': has_error && errors.password }">
                                 <label for="password_confirmation">Passwort bestätigen</label>
@@ -76,3 +76,10 @@
         }
     }
 </script>
+<style scoped>
+
+    span {
+        color: red;
+    }
+
+</style>
