@@ -29,7 +29,7 @@
 
                 <!-- Post Content -->
                 <p class="lead">{{ post.content }}</p>
-
+                <router-link :to="{name: 'blog'}" class="btn btn-secondary">Zurück</router-link>
 
                 <hr>
 

@@ -33,7 +33,8 @@
                                 <input type="file" id="postPic" name="image">
                             </div>-->
 
-                            <a @click="updatePost(post.id)" class="btn btn-primary">Update</a>
+                            <a @click="updatePost(post.id)" class="btn btn-primary" style="color: white">Update</a>
+                            <router-link :to="{name: 'admin.all-posts'}" class="btn btn-secondary">Zurück zur Übersicht</router-link>
                         </form>
                     </div>
                 </div>

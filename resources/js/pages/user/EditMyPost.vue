@@ -33,9 +33,9 @@
                                  <input type="file" id="postPic" name="image">
                              </div>-->
 
-                            <a @click="updatePost(post.id)" class="btn btn-primary">Update</a>
+                            <a class="btn btn-primary" style="color: white" @click="updatePost(post.id)" >Update</a>
 
-                            <!--<button @click="$router.go(-1)">Back</button>-->
+                            <router-link :to="{name: 'dashboard.my-posts'}" class="btn btn-secondary">Zurück zur Übersicht</router-link>
 
                         </form>
                     </div>
