@@ -42,17 +42,14 @@
                     ],
                     // LOGGED USER
                     user: [
-                        { name: 'Test', path: 'dashboard.test' },
-                        { name: 'User', path: 'dashboard.user' },
                         { name: 'Meine Posts', path: 'dashboard.my-posts' },
                         { name: 'Add Post', path: 'dashboard.add-post' }
                     ],
                     // LOGGED ADMIN
                     admin: [
-                        { name: 'Test', path: 'admin.test' },
-                        { name: 'User', path: 'admin.user' },
-                        { name: 'Todoliste', path: 'admin.todo' },
-                        { name: 'Alle Posts', path: 'admin.all-posts' },
+                        /*{ name: 'User', path: 'admin.user' },*/
+                        { name: 'User', path: 'admin.all-users' },
+                        { name: 'Posts', path: 'admin.all-posts' },
                         { name: 'Add Post', path: 'admin.add-post'}
                     ]
                 }

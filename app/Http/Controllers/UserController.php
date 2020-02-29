@@ -20,4 +20,26 @@ class UserController extends Controller
         User::where('id', $data['id'])->update(['name'=>$data['value']]);
         return response()->json($request->all());
     }
+
+    public function getEmail(){
+        $data = User::all();
+        return response()->json (["users"=> $data]);
+    }
+
+    public function putEmail(Request $request){
+        $data = $request->validate([
+            'id' => 'required|numeric',
+            'value' => 'required|email'
+        ]);
+        User::where('id', $data['id'])->update(['email'=>$data['value']]);
+        return response()->json($request->all());
+    }
+
+    public function destroy($id)
+    {
+        $user = User::find($id);
+        $user->delete();
+
+        return response()->json('Der User wurde erfolgreich gelöscht');
+    }
 }

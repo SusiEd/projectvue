@@ -11,7 +11,7 @@ import User from './pages/User'
 import MyPosts from './pages/user/MyPosts'
 import EditMyPost from './pages/user/EditMyPost'
 import AddMyPost from './pages/user/AddMyPost'
-import Todo from './pages/Todo'
+import AllUsers from './pages/admin/AllUsers'
 import AdminDashboard from './pages/admin/AdminDashboard'
 import AllPosts from './pages/admin/AllPosts'
 import AddPost from './pages/admin/AddPost'
@@ -75,16 +75,11 @@ const routes = [
                 name: 'dashboard',
                 component: Dashboard
             },
-            {
+            /*{
                 path: '/dashboard/test',
                 name: 'dashboard.test',
                 component: Test
-            },
-            {
-                path: '/dashboard/user',
-                name: 'dashboard.user',
-                component: User
-            },
+            },*/
             {
                 path: '/dashboard/my-posts',
                 name: 'dashboard.my-posts',
@@ -118,7 +113,7 @@ const routes = [
                     name: 'admin.dashboard',
                     component: AdminDashboard
                 },
-                {
+               /* {
                     path: '/admin/test',
                     name: 'admin.test',
                     component: Test
@@ -127,11 +122,11 @@ const routes = [
                     path: '/admin/user',
                     name: 'admin.user',
                     component: User
-                },
+                },*/
                 {
-                    path: '/admin/todo',
-                    name: 'admin.todo',
-                    component: Todo
+                    path: '/admin/all-users',
+                    name: 'admin.all-users',
+                    component: AllUsers
                 },
                 {
                     path: '/admin/all-posts',

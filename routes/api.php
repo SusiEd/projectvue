@@ -27,12 +27,8 @@ Route::prefix('auth')->group(function () {
     Route::middleware('auth:api')->group(function () {
         // Get user info
         Route::get('user', 'AuthController@user');
-
         // Logout user from application
         Route::post('logout', 'AuthController@logout');
-        Route::get('getUsers', 'UserController@index');
-        Route::put('putUser', 'UserController@putUser');
-
 
     });
 });
@@ -56,10 +52,16 @@ Route::prefix('posts')->group(function () {      // http://localhost:8000/api/po
 
         });
 
-
-
 });
 
+// Users
+Route::prefix('users')->group(function () {
+    Route::middleware('auth:api')->group(function () {
+        Route::get('getUsers', 'UserController@index');
+        Route::put('putUser', 'UserController@putUser');
+        Route::get('getEmail', 'UserController@getEmail');
+        Route::put('putEmail', 'UserController@putEmail');
+        Route::delete('delete/{id}', 'UserController@destroy');
 
-
-
+    });
+});

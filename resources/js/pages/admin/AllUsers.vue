@@ -7,6 +7,7 @@
                 <th scope="col">Id</th>
                 <th scope="col">Name</th>
                 <th scope="col">E-Mail</th>
+                <th></th>
             </tr>
             </thead>
             <tbody>
@@ -14,10 +15,19 @@
                 <td>{{ user.id }}</td>
                 <td>
                     <form action="">
-                        <input type="text" class="form-control" :value="user.name" @change="putUser($event.target.value, user.id)">
+                        <div class="form-group col-md-12">
+                            <input type="text" class="form-control" :value="user.name" @change="putUser($event.target.value, user.id)">
+                        </div>
                     </form>
                 </td>
-                <td>{{user.email}}</td>
+                <td>
+                    <form action="">
+                        <div class="form-group col-md-12">
+                            <input type="text" class="form-control" :value="user.email" @change="putEmail($event.target.value, user.id)">
+                        </div>
+                    </form>
+                </td>
+
 
                 <td><button class="btn btn-secondary" @click="deleteUser(user.id)">Löschen</button></td>
             </tr>
@@ -51,6 +61,18 @@
             },
             putUser(value, id){
                 axios.put('users/putUser', {
+                    id: id,
+                    value: value
+                })
+                    .then(res=>{
+                        console.log(res);
+                    })
+                    .catch(err=>{
+                        console.log(err);
+                    })
+            },
+            putEmail(value, id){
+                axios.put('users/putEmail', {
                     id: id,
                     value: value
                 })

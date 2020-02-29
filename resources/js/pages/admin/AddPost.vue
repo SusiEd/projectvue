@@ -9,7 +9,7 @@
                             <div class="form-group">
                                 <label for="postTitle">Titel</label>
                                 <input type="text" class="form-control" id="postTitle" placeholder="Titel" v-model="title">
-                                <small v-if="errors.title" class="error">{{ errors.title[0] }}</small>
+                                <span v-if="errors.title" class="error">{{ errors.title[0] }}</span>
                             </div>
 
                            <!-- <div class="form-group">
@@ -27,7 +27,7 @@
                             <div class="form-group">
                                 <label for="postContent">Text</label>
                                 <textarea class="form-control" id="postContent" rows="5" placeholder="Hier bitte Text einfügen" v-model="content"></textarea>
-                                <small v-if="errors.content" class="error">{{ errors.content[0] }}</small>
+                                <span v-if="errors.content" class="error">{{ errors.content[0] }}</span>
                             </div>
 
                            <!-- <div class="form-group">
@@ -75,10 +75,10 @@
 </script>
 <style scoped>
 
-    small {
+    span {
         color: red;
     }
 
-    
+
 
 </style>
