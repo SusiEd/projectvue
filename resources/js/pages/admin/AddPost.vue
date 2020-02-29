@@ -1,5 +1,5 @@
 <template>
-    <div class="container">
+    <div class="container test">
         <div class="row justify-content-md-center">
             <div class="col-10">
                 <div class="card card-default">
@@ -9,6 +9,7 @@
                             <div class="form-group">
                                 <label for="postTitle">Titel</label>
                                 <input type="text" class="form-control" id="postTitle" placeholder="Titel" v-model="title">
+                                <small v-if="errors.title" class="error">{{ errors.title[0] }}</small>
                             </div>
 
                            <!-- <div class="form-group">
@@ -26,6 +27,7 @@
                             <div class="form-group">
                                 <label for="postContent">Text</label>
                                 <textarea class="form-control" id="postContent" rows="5" placeholder="Hier bitte Text einfügen" v-model="content"></textarea>
+                                <small v-if="errors.content" class="error">{{ errors.content[0] }}</small>
                             </div>
 
                            <!-- <div class="form-group">
@@ -48,7 +50,8 @@
             return {
                 title: [],
                 content: [],
-                user_id: this.$route.params.id
+                user_id: this.$route.params.id,
+                errors: []
             }
         },
         methods: {
@@ -61,10 +64,21 @@
                     console.log(response);
                     this.$router.push({name: 'admin.all-posts'})
                 }).catch((error) => {
-                    console.log(error);
+                    if (error.response.status === 422) {
+                        this.errors = error.response.data.errors
+                    }
                 });
             },
 
         },
     }
 </script>
+<style scoped>
+
+    small {
+        color: red;
+    }
+
+    
+
+</style>

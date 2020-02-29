@@ -55,13 +55,21 @@
                     })
             },
             deletePost(id) {
+                let confirmation = confirm("Willst du den Post sicher löschen?");
+                if (confirmation) {
                 axios
                     .delete('posts/delete/' + id)
                     .then(response => {
                         let i = this.posts.map(item => item.id).indexOf(id);
                         this.posts.splice(i, 1)
                     });
+                }
             }
         }
     }
 </script>
+<style scoped>
+    h1 {
+        margin-top: 40px;
+    }
+</style>

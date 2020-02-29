@@ -9,31 +9,33 @@
                             <div class="form-group">
                                 <label for="postTitle">Titel</label>
                                 <input type="text" class="form-control" id="postTitle" placeholder="Titel" v-model="title">
+                                <small v-if="errors.title" class="error">{{ errors.title[0] }}</small>
                             </div>
 
-                           <!-- <div class="form-group">
-                                <label for="postAuthor">Autor </label>
-                                <select name="post_author" id="postAuthor">
-                                    <option value=""></option>
-                                </select>
-                            </div>-->
+                            <!-- <div class="form-group">
+                                 <label for="postAuthor">Autor </label>
+                                 <select name="post_author" id="postAuthor">
+                                     <option value=""></option>
+                                 </select>
+                             </div>-->
 
-                           <!-- <div class="form-group">
-                                <label for="tag">Password</label>
-                                <input type="text" class="form-control" id="tag" placeholder="Beispieltag, Beispieltag, Beispieltag">
-                            </div>-->
+                            <!-- <div class="form-group">
+                                 <label for="tag">Password</label>
+                                 <input type="text" class="form-control" id="tag" placeholder="Beispieltag, Beispieltag, Beispieltag">
+                             </div>-->
 
                             <div class="form-group">
                                 <label for="postContent">Text</label>
                                 <textarea class="form-control" id="postContent" rows="5" placeholder="Hier bitte Text einfügen" v-model="content"></textarea>
+                                <small v-if="errors.content" class="error">{{ errors.content[0] }}</small>
                             </div>
 
-                           <!-- <div class="form-group">
-                                <label for="postPic">Bild</label>
-                                <input type="file" id="postPic" name="image">
-                            </div>-->
+                            <!-- <div class="form-group">
+                                 <label for="postPic">Bild</label>
+                                 <input type="file" id="postPic" name="image">
+                             </div>-->
 
-                            <a @click.prevent="createNewPost" class="btn btn-primary">Post erstellen</a>
+                            <button @click.prevent="createNewPost" class="btn btn-primary">Post erstellen</button>
                         </form>
                     </div>
                 </div>
@@ -48,7 +50,8 @@
             return {
                 title: [],
                 content: [],
-                user_id: this.$route.params.id
+                user_id: this.$route.params.id,
+                errors: []
             }
         },
         methods: {
@@ -61,10 +64,19 @@
                     console.log(response);
                     this.$router.push({name: 'dashboard.my-posts'})
                 }).catch((error) => {
-                    console.log(error);
+                    if (error.response.status === 422) {
+                        this.errors = error.response.data.errors
+                    }
                 });
             },
 
         },
     }
 </script>
+<style scoped>
+
+    small {
+        color: red;
+    }
+
+</style>

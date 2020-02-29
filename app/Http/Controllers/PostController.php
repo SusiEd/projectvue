@@ -17,11 +17,6 @@ class PostController extends Controller
     }
 
 
-    public function create()
-    {
-        //
-    }
-
 
     public function store(Request $request)
     {
@@ -101,6 +96,8 @@ class PostController extends Controller
 
         return response()->json('Der Post wurde erfolgreich gelöscht');
     }
+
+
 
     public function storeUserPost(Request $request)
     {

@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h1>Alle Posts von</h1>
+        <h1>Meine Posts</h1>
         <table class="table table-striped">
             <thead>
             <tr>
@@ -56,13 +56,21 @@
                     })
             },
             deletePost(id) {
+                let confirmation = confirm("Willst du den Post sicher löschen?");
+                if (confirmation) {
                 axios
                     .delete('posts/userPost/delete/' + id)
                     .then(response => {
                         let i = this.posts.map(item => item.id).indexOf(id);
                         this.posts.splice(i, 1)
                     });
+                }
             }
         }
     }
 </script>
+<style scoped>
+    h1 {
+        margin-top: 40px;
+    }
+</style>
