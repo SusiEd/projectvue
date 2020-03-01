@@ -6,8 +6,6 @@ import Blog from './pages/PostsPage'
 import Register from './pages/Register'
 import Login from './pages/Login'
 import Dashboard from './pages/user/Dashboard'
-import Test from './pages/Test'
-import User from './pages/User'
 import MyPosts from './pages/user/MyPosts'
 import EditMyPost from './pages/user/EditMyPost'
 import AddMyPost from './pages/user/AddMyPost'
@@ -75,11 +73,6 @@ const routes = [
                 name: 'dashboard',
                 component: Dashboard
             },
-            /*{
-                path: '/dashboard/test',
-                name: 'dashboard.test',
-                component: Test
-            },*/
             {
                 path: '/dashboard/my-posts',
                 name: 'dashboard.my-posts',
@@ -113,16 +106,6 @@ const routes = [
                     name: 'admin.dashboard',
                     component: AdminDashboard
                 },
-               /* {
-                    path: '/admin/test',
-                    name: 'admin.test',
-                    component: Test
-                },
-                {
-                    path: '/admin/user',
-                    name: 'admin.user',
-                    component: User
-                },*/
                 {
                     path: '/admin/all-users',
                     name: 'admin.all-users',

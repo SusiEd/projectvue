@@ -6,7 +6,7 @@
                     <div class="card-header">Registrierung</div>
                     <div class="card-body">
                         <div class="alert alert-danger" v-if="has_error && !success">
-                            <p v-if="error == 'registration_validation_error'">Validation Errors.</p>
+                            <p v-if="error == 'registration_validation_error'">Versuche es erneut!</p>
                             <p v-else>Fehler - Bitte alle Felder ausfüllen!</p>
                         </div>
                         <form autocomplete="off" @submit.prevent="register" v-if="!success" method="post">
