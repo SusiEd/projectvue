@@ -41,19 +41,18 @@
 
 
             <!-- Post -->
-            <div v-for="post in filteredPosts" class="row">
+            <div v-for="post in filteredPosts" class="row" style="margin-bottom: 50px">
                 <div class="col-md-7">
                     <a href="#">
                         <img class="img-fluid rounded mb-3 mb-md-0" src="http://placehold.it/700x300" alt="">
                     </a>
                     <div class="text-muted">
                         Erstellt am {{ post.created_at | moment("DD.MM.YY") }} von {{ post.user.name }}
-                        <a href="#">Start Bootstrap</a>
                     </div>
                 </div>
                 <div class="col-md-5">
                     <h3>{{ post.title }}</h3>
-                    <p>{{ post.content }}</p>
+                    <p>{{ post.content | sortlength(200," ...")}}</p>
                     <router-link :to="{name: 'post', params: { id: post.id }}" class="btn btn-primary">Read More &rarr;
                     </router-link>
                 </div>

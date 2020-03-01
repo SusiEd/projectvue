@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Str;
 
 
 class Post extends Model
@@ -15,7 +16,6 @@ class Post extends Model
 
     public static function createFromArray($data)
     {
-
         $user_id = Auth::user()->id;
 
         $post = new Post();
@@ -29,12 +29,14 @@ class Post extends Model
 
     }
 
-    public function user() {
+    public function user()
+    {
         return $this->belongsTo(User::class);
     }
 
 
-    protected function updateFromArray($data) {
+    protected function updateFromArray($data)
+    {
         $user_id = Auth::user()->id;
 
 

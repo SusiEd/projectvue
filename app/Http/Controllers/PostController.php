@@ -17,7 +17,6 @@ class PostController extends Controller
     }
 
 
-
     public function store(Request $request)
     {
 
@@ -47,7 +46,6 @@ class PostController extends Controller
     }
 
 
-
     public function update($id, Request $request)
     {
         $post = Post::find($id);
@@ -65,6 +63,7 @@ class PostController extends Controller
         return response()->json('Der Post wurde erfolgreich gelöscht');
     }
 
+
     public function getUserPosts()
     {
         auth()->id();
@@ -73,13 +72,15 @@ class PostController extends Controller
 
     }
 
-  public function editUserPost($id)
+
+    public function editUserPost($id)
     {
 
         $post = Post::find($id);
         return response()->json($post);
 
     }
+
 
     public function updateUserPost($id, Request $request)
     {
@@ -89,6 +90,7 @@ class PostController extends Controller
         return response()->json('Update erfolgreich');
     }
 
+
     public function destroyUserPost($id)
     {
         $post = Post::find($id);
@@ -96,7 +98,6 @@ class PostController extends Controller
 
         return response()->json('Der Post wurde erfolgreich gelöscht');
     }
-
 
 
     public function storeUserPost(Request $request)
@@ -110,4 +111,6 @@ class PostController extends Controller
         $post = Post::createFromArray($data);
         return response()->json($post);
     }
+
+
 }
