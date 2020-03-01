@@ -3857,6 +3857,14 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: "AllUsers",
   data: function data() {
@@ -3888,6 +3896,16 @@ __webpack_require__.r(__webpack_exports__);
     },
     putEmail: function putEmail(value, id) {
       axios.put('users/putEmail', {
+        id: id,
+        value: value
+      }).then(function (res) {
+        console.log(res);
+      })["catch"](function (err) {
+        console.log(err);
+      });
+    },
+    putRole: function putRole(value, id) {
+      axios.put('users/putRole', {
         id: id,
         value: value
       }).then(function (res) {
@@ -62055,7 +62073,7 @@ var render = function() {
             _vm._v(" "),
             _c("td", [
               _c("form", { attrs: { action: "" } }, [
-                _c("div", { staticClass: "form-group col-md-12" }, [
+                _c("div", { staticClass: "form-group" }, [
                   _c("input", {
                     staticClass: "form-control",
                     attrs: { type: "text" },
@@ -62072,14 +62090,31 @@ var render = function() {
             _vm._v(" "),
             _c("td", [
               _c("form", { attrs: { action: "" } }, [
-                _c("div", { staticClass: "form-group col-md-12" }, [
+                _c("div", { staticClass: "form-group" }, [
                   _c("input", {
                     staticClass: "form-control",
-                    attrs: { type: "text" },
+                    attrs: { type: "text", id: "email" },
                     domProps: { value: user.email },
                     on: {
                       change: function($event) {
                         return _vm.putEmail($event.target.value, user.id)
+                      }
+                    }
+                  })
+                ])
+              ])
+            ]),
+            _vm._v(" "),
+            _c("td", [
+              _c("form", { attrs: { action: "" } }, [
+                _c("div", { staticClass: "form-group" }, [
+                  _c("input", {
+                    staticClass: "form-control",
+                    attrs: { type: "text" },
+                    domProps: { value: user.role },
+                    on: {
+                      change: function($event) {
+                        return _vm.putRole($event.target.value, user.id)
                       }
                     }
                   })
@@ -62120,6 +62155,8 @@ var staticRenderFns = [
         _c("th", { attrs: { scope: "col" } }, [_vm._v("Name")]),
         _vm._v(" "),
         _c("th", { attrs: { scope: "col" } }, [_vm._v("E-Mail")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Rolle")]),
         _vm._v(" "),
         _c("th")
       ])

@@ -7,7 +7,6 @@
                 <th scope="col">Id</th>
                 <th scope="col">Name</th>
                 <th scope="col">E-Mail</th>
-                <th scope="col">Rolle</th>
                 <th></th>
             </tr>
             </thead>
@@ -16,22 +15,15 @@
                 <td>{{ user.id }}</td>
                 <td>
                     <form action="">
-                        <div class="form-group">
+                        <div class="form-group col-md-12">
                             <input type="text" class="form-control" :value="user.name" @change="putUser($event.target.value, user.id)">
                         </div>
                     </form>
                 </td>
                 <td>
                     <form action="">
-                        <div class="form-group">
-                            <input type="text" id="email" class="form-control" :value="user.email" @change="putEmail($event.target.value, user.id)">
-                        </div>
-                    </form>
-                </td>
-                <td>
-                    <form action="">
-                        <div class="form-group">
-                            <input type="text" class="form-control" :value="user.role" @change="putRole($event.target.value, user.id)">
+                        <div class="form-group col-md-12">
+                            <input type="text" class="form-control" :value="user.email" @change="putEmail($event.target.value, user.id)">
                         </div>
                     </form>
                 </td>
@@ -81,18 +73,6 @@
             },
             putEmail(value, id){
                 axios.put('users/putEmail', {
-                    id: id,
-                    value: value
-                })
-                    .then(res=>{
-                        console.log(res);
-                    })
-                    .catch(err=>{
-                        console.log(err);
-                    })
-            },
-            putRole(value, id){
-                axios.put('users/putRole', {
                     id: id,
                     value: value
                 })

@@ -61,6 +61,7 @@ Route::prefix('users')->group(function () {
         Route::put('putUser', 'UserController@putUser');
         Route::get('getEmail', 'UserController@getEmail');
         Route::put('putEmail', 'UserController@putEmail');
+        Route::put('putRole', 'UserController@putRole');
         Route::delete('delete/{id}', 'UserController@destroy');
 
     });

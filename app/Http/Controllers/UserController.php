@@ -26,12 +26,23 @@ class UserController extends Controller
         return response()->json (["users"=> $data]);
     }
 
+
     public function putEmail(Request $request){
         $data = $request->validate([
             'id' => 'required|numeric',
             'value' => 'required|email'
         ]);
         User::where('id', $data['id'])->update(['email'=>$data['value']]);
+        return response()->json($request->all());
+    }
+
+
+    public function putRole(Request $request){
+        $data = $request->validate([
+            'id' => 'required|numeric',
+            'value' => 'required|numeric'
+        ]);
+        User::where('id', $data['id'])->update(['role'=>$data['value']]);
         return response()->json($request->all());
     }
 
