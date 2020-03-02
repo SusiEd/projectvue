@@ -56,9 +56,9 @@
                         app.success = true;
                         let redirectTo = '';
                         if(role === 1) {
-                            redirectTo = 'dashboard';
+                            redirectTo = 'dashboard.my-posts';
                         } else if (role === 2) {
-                            redirectTo = 'admin.dashboard';
+                            redirectTo = 'admin.all-posts';
                         }
                         this.$router.push({name: redirectTo})
 

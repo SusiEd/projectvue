@@ -3181,10 +3181,10 @@ __webpack_require__.r(__webpack_exports__);
         }],
         // LOGGED ADMIN
         admin: [{
-          name: 'User',
+          name: 'Alle User',
           path: 'admin.all-users'
         }, {
-          name: 'Posts',
+          name: 'Alle Posts',
           path: 'admin.all-posts'
         }, {
           name: 'Add Post',
@@ -3263,9 +3263,9 @@ __webpack_require__.r(__webpack_exports__);
           var redirectTo = '';
 
           if (role === 1) {
-            redirectTo = 'dashboard';
+            redirectTo = 'dashboard.my-posts';
           } else if (role === 2) {
-            redirectTo = 'admin.dashboard';
+            redirectTo = 'admin.all-posts';
           }
 
           this.$router.push({

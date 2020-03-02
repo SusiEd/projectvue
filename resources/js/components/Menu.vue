@@ -47,8 +47,8 @@
                     ],
                     // LOGGED ADMIN
                     admin: [
-                        { name: 'User', path: 'admin.all-users' },
-                        { name: 'Posts', path: 'admin.all-posts' },
+                        { name: 'Alle User', path: 'admin.all-users' },
+                        { name: 'Alle Posts', path: 'admin.all-posts' },
                         { name: 'Add Post', path: 'admin.add-post'}
                     ]
                 }
