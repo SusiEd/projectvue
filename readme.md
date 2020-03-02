@@ -33,6 +33,10 @@ Versionen:
 - User Rolle 1: => kann eigene Posts schreiben, bearbeiten, löschen und sieht nur seine eigenen Posts
 
 
+# Video:
+https://www.loom.com/share/b4d92b3ed6ac4ab383df84347231cfc1
+
+
 # Datenbank Modell:
 Einfache Many-to-Many Beziehungen
 - User - many - Posts & umgekehrt
