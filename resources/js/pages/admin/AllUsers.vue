@@ -122,6 +122,6 @@
 </script>
 <style scoped>
     h1 {
-        margin-top: 40px;
+        margin-top: 100px;
     }
 </style>

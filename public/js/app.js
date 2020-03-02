@@ -8860,7 +8860,7 @@ exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loa
 
 
 // module
-exports.push([module.i, "\n.card {\n    margin-top: 40px;\n    margin-bottom: 50px;\n}\n\n", ""]);
+exports.push([module.i, "\n.card {\n    margin-top: 100px;\n    margin-bottom: 50px;\n}\n\n", ""]);
 
 // exports
 
@@ -8917,7 +8917,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\nh1[data-v-47f9b63b] {\n    margin-top: 40px;\n}\n", ""]);
+exports.push([module.i, "\nh1[data-v-47f9b63b] {\n    margin-top: 100px;\n}\n", ""]);
 
 // exports
 
@@ -8936,7 +8936,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\nh1[data-v-3658b420] {\n    margin-top: 40px;\n}\n", ""]);
+exports.push([module.i, "\nh1[data-v-3658b420] {\n    margin-top: 100px;\n}\n", ""]);
 
 // exports
 
@@ -8974,7 +8974,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, "\nh1[data-v-6c230b8c] {\n    margin-top: 40px;\n}\n", ""]);
+exports.push([module.i, "\nh1[data-v-6c230b8c] {\n    margin-top: 100px;\n}\n", ""]);
 
 // exports
 
@@ -42262,7 +42262,7 @@ var staticRenderFns = [
                   _c("img", {
                     attrs: {
                       src: "/assets/img/icon-kochen.svg",
-                      alt: "Selber Kochen"
+                      alt: "Icon - Selber Kochen"
                     }
                   })
                 ]),
@@ -42283,7 +42283,7 @@ var staticRenderFns = [
                   _c("img", {
                     attrs: {
                       src: "/assets/img/icon-flexibel.svg",
-                      alt: "Absolute Flexibilität"
+                      alt: "Icon - Absolute Flexibilität"
                     }
                   })
                 ]),
@@ -42304,7 +42304,7 @@ var staticRenderFns = [
                   _c("img", {
                     attrs: {
                       src: "/assets/img/icon-abnehmen.svg",
-                      alt: "Endlich abnehmen"
+                      alt: "Icon - Endlich abnehmen"
                     }
                   })
                 ]),
@@ -42360,7 +42360,7 @@ var staticRenderFns = [
                       staticClass: "img-fluid",
                       attrs: {
                         src: "/assets/img/01-haehnchen-gemuese-thumbnail.jpg",
-                        alt: "Hähnchen mit Gemüse"
+                        alt: "Teller mit gekochtem Hähnchen und Gemüse"
                       }
                     })
                   ]
@@ -42393,7 +42393,7 @@ var staticRenderFns = [
                       staticClass: "img-fluid",
                       attrs: {
                         src: "/assets/img/02-rotebeete-suppe-thumbnail.jpg",
-                        alt: ""
+                        alt: "Teller mit gekochter rote Beete Suppe"
                       }
                     })
                   ]
@@ -42426,7 +42426,7 @@ var staticRenderFns = [
                       staticClass: "img-fluid",
                       attrs: {
                         src: "/assets/img/03-pilz-pfanne-thumbnail.jpg",
-                        alt: ""
+                        alt: "Teller mit gekochter Pilzpfanne"
                       }
                     })
                   ]
@@ -42613,7 +42613,10 @@ var staticRenderFns = [
                 _c("div", { staticClass: "review-client" }, [
                   _c("img", {
                     staticClass: "mx-auto rounded-circle",
-                    attrs: { src: "/assets/img/schilcher-julia.jpg", alt: "" }
+                    attrs: {
+                      src: "/assets/img/schilcher-julia.jpg",
+                      alt: "Kundenrezension Julia Schilcher"
+                    }
                   }),
                   _vm._v(" "),
                   _c("h4", [_vm._v("Julia Schilcher")]),
@@ -42630,7 +42633,10 @@ var staticRenderFns = [
                 _c("div", { staticClass: "review-client" }, [
                   _c("img", {
                     staticClass: "mx-auto rounded-circle",
-                    attrs: { src: "/assets/img/melle-thomas.jpg", alt: "" }
+                    attrs: {
+                      src: "/assets/img/melle-thomas.jpg",
+                      alt: "Kundenrezension Thomas Melle"
+                    }
                   }),
                   _vm._v(" "),
                   _c("h4", [_vm._v("Thomas Melle")]),
@@ -42647,7 +42653,10 @@ var staticRenderFns = [
                 _c("div", { staticClass: "review-client" }, [
                   _c("img", {
                     staticClass: "mx-auto rounded-circle",
-                    attrs: { src: "/assets/img/schuhbert-corinna.jpg", alt: "" }
+                    attrs: {
+                      src: "/assets/img/schuhbert-corinna.jpg",
+                      alt: "Kundenrezension Corinna Schuhbert"
+                    }
                   }),
                   _vm._v(" "),
                   _c("h4", [_vm._v("Corinna Schuhbert")]),
@@ -65803,10 +65812,6 @@ var routes = [{
     }
   },
   children: [{
-    path: '/admin',
-    name: 'admin.dashboard',
-    component: _pages_admin_AdminDashboard__WEBPACK_IMPORTED_MODULE_11__["default"]
-  }, {
     path: '/admin/all-users',
     name: 'admin.all-users',
     component: _pages_admin_AllUsers__WEBPACK_IMPORTED_MODULE_10__["default"]

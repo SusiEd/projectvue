@@ -27,21 +27,21 @@
             <div class="row text-center">
                 <div class="col-md-4">
 				<span class="fa-stack fa-4x">
-					<img src="/assets/img/icon-kochen.svg" alt="Selber Kochen">
+					<img src="/assets/img/icon-kochen.svg" alt="Icon - Selber Kochen">
 				</span>
                     <h4 class="service-heading">Tolle Gerichte</h4>
                     <p class="text-muted">zum selber Kochen. Wir liefern Diätrezepte und frische Zutaten direkt zu Dir nach Hause!</p>
                 </div>
                 <div class="col-md-4">
 				<span class="fa-stack fa-4x">
-				<img src="/assets/img/icon-flexibel.svg" alt="Absolute Flexibilität">
+				<img src="/assets/img/icon-flexibel.svg" alt="Icon - Absolute Flexibilität">
 				</span>
                     <h4 class="service-heading">Flexibel</h4>
                     <p class="text-muted">Unser Programm unterstützt Deine Diät. Plan alle Gerichte individuell und integrier Sie so in Deinen Alltag.</p>
                 </div>
                 <div class="col-md-4">
 				<span class="fa-stack fa-4x">
-				<img src="/assets/img/icon-abnehmen.svg" alt="Endlich abnehmen">
+				<img src="/assets/img/icon-abnehmen.svg" alt="Icon - Endlich abnehmen">
 				</span>
                     <h4 class="service-heading">Abnehmen</h4>
                     <p class="text-muted">Wir helfen Dir dabei. Wir suchen für Dich Rezpete und kaufen für Dich ein. So nimmt du im Handumdrehen ab.</p>
@@ -68,7 +68,7 @@
                                 <p>Zu den Rezepten ></p>
                             </div>
                         </div>
-                        <img class="img-fluid" src="/assets/img/01-haehnchen-gemuese-thumbnail.jpg" alt="Hähnchen mit Gemüse">
+                        <img class="img-fluid" src="/assets/img/01-haehnchen-gemuese-thumbnail.jpg" alt="Teller mit gekochtem Hähnchen und Gemüse">
                     </a>
                     <div class="recipe-caption">
                         <h4>Hähnchen mit Gemüse</h4>
@@ -83,7 +83,7 @@
                                 <p>Zu den Rezepten ></p>
                             </div>
                         </div>
-                        <img class="img-fluid" src="/assets/img/02-rotebeete-suppe-thumbnail.jpg" alt="">
+                        <img class="img-fluid" src="/assets/img/02-rotebeete-suppe-thumbnail.jpg" alt="Teller mit gekochter rote Beete Suppe">
                     </a>
                     <div class="recipe-caption">
                         <h4>Rote Beete Suppe</h4>
@@ -98,7 +98,7 @@
                                 <p>Zu den Rezepten ></p>
                             </div>
                         </div>
-                        <img class="img-fluid" src="/assets/img/03-pilz-pfanne-thumbnail.jpg" alt="">
+                        <img class="img-fluid" src="/assets/img/03-pilz-pfanne-thumbnail.jpg" alt="Teller mit gekochter Pilzpfanne">
                     </a>
                     <div class="recipe-caption">
                         <h4>Pilzpfanne</h4>
@@ -203,7 +203,7 @@
             <div class="row">
                 <div class="col-sm-4">
                     <div class="review-client">
-                        <img class="mx-auto rounded-circle" src="/assets/img/schilcher-julia.jpg" alt="">
+                        <img class="mx-auto rounded-circle" src="/assets/img/schilcher-julia.jpg" alt="Kundenrezension Julia Schilcher">
                         <h4>Julia Schilcher</h4>
                         <p class="text-muted">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua.</p>
                     </div>
@@ -211,7 +211,7 @@
 
                 <div class="col-sm-4">
                     <div class="review-client">
-                        <img class="mx-auto rounded-circle" src="/assets/img/melle-thomas.jpg" alt="">
+                        <img class="mx-auto rounded-circle" src="/assets/img/melle-thomas.jpg" alt="Kundenrezension Thomas Melle">
                         <h4>Thomas Melle</h4>
                         <p class="text-muted">Accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit.</p>
                     </div>
@@ -219,7 +219,7 @@
 
                 <div class="col-sm-4">
                     <div class="review-client">
-                        <img class="mx-auto rounded-circle" src="/assets/img/schuhbert-corinna.jpg" alt="">
+                        <img class="mx-auto rounded-circle" src="/assets/img/schuhbert-corinna.jpg" alt="Kundenrezension Corinna Schuhbert">
                         <h4>Corinna Schuhbert</h4>
                         <p class="text-muted">At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
                     </div>

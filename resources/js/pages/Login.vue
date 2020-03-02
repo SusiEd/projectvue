@@ -77,7 +77,7 @@
 </script>
 <style lang="css">
     .card {
-        margin-top: 40px;
+        margin-top: 100px;
         margin-bottom: 50px;
     }
 

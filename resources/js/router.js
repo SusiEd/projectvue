@@ -101,11 +101,7 @@ const routes = [
             auth: {roles: 2, redirect: {name: 'login'}, forbiddenRedirect: '/403'}
         }, children:
             [
-                {
-                    path: '/admin',
-                    name: 'admin.dashboard',
-                    component: AdminDashboard
-                },
+
                 {
                     path: '/admin/all-users',
                     name: 'admin.all-users',
