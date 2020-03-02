@@ -6,10 +6,10 @@
     <header class="masthead">
         <div class="container">
             <div class="intro-text">
-                <img class="logo" src="/assets/img/logo-heynewme.svg" alt="">
+                <img class="logo" src="/assets/img/logo-heynewme.svg" alt="Logo HEY NEW ME">
                 <div class="intro-lead-in">Diätkochboxen</div>
                 <h1 class="intro-heading text-uppercase">Koch dich schlank!</h1>
-                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Diätkochbox bestellen</a>
+                <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="">Diätkochbox bestellen</a>
             </div>
         </div>
     </header>
@@ -235,7 +235,7 @@
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading text-uppercase">Newsletter</h2>
                     <h3 class="section-subheading">Immer auf dem neuesten Stand. Erhalte regelmäßig News von uns.</h3>
-                    <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="#services">Newsletter bestellen</a>
+                    <a class="btn btn-primary btn-xl text-uppercase js-scroll-trigger" href="">Newsletter bestellen</a>
                 </div>
             </div>
         </div>

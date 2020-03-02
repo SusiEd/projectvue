@@ -3586,12 +3586,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
-//
-//
-//
-//
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -42041,7 +42035,7 @@ var render = function() {
   var _c = _vm._self._c || _h
   return _c(
     "nav",
-    { staticClass: "navbar navbar-expand-lg navbar-dark bg-dark" },
+    { staticClass: "navbar navbar-expand-lg navbar-dark bg-dark fixed-top" },
     [
       _c(
         "router-link",
@@ -42218,7 +42212,10 @@ var staticRenderFns = [
           _c("div", { staticClass: "intro-text" }, [
             _c("img", {
               staticClass: "logo",
-              attrs: { src: "/assets/img/logo-heynewme.svg", alt: "" }
+              attrs: {
+                src: "/assets/img/logo-heynewme.svg",
+                alt: "Logo HEY NEW ME"
+              }
             }),
             _vm._v(" "),
             _c("div", { staticClass: "intro-lead-in" }, [
@@ -42234,7 +42231,7 @@ var staticRenderFns = [
               {
                 staticClass:
                   "btn btn-primary btn-xl text-uppercase js-scroll-trigger",
-                attrs: { href: "#services" }
+                attrs: { href: "" }
               },
               [_vm._v("Diätkochbox bestellen")]
             )
@@ -42689,7 +42686,7 @@ var staticRenderFns = [
                   {
                     staticClass:
                       "btn btn-primary btn-xl text-uppercase js-scroll-trigger",
-                    attrs: { href: "#services" }
+                    attrs: { href: "" }
                   },
                   [_vm._v("Newsletter bestellen")]
                 )
@@ -43350,11 +43347,14 @@ var render = function() {
         [
           _c("h1", { staticClass: "mt-4" }, [_vm._v(_vm._s(_vm.post.title))]),
           _vm._v(" "),
-          _vm._m(0),
-          _vm._v(" "),
           _c("hr"),
           _vm._v(" "),
-          _c("p", [_vm._v("Posted on January 1, 2019 at 12:00 PM")]),
+          _c("p", [
+            _vm._v(
+              "geposted am " +
+                _vm._s(_vm._f("moment")(_vm.post.created_at, "DD.MM.YYYY"))
+            )
+          ]),
           _vm._v(" "),
           _c("hr"),
           _vm._v(" "),
@@ -43378,9 +43378,9 @@ var render = function() {
           _vm._v(" "),
           _c("hr"),
           _vm._v(" "),
-          _vm._m(1),
+          _vm._m(0),
           _vm._v(" "),
-          _vm._m(2)
+          _vm._m(1)
         ],
         1
       )
@@ -43388,15 +43388,6 @@ var render = function() {
   ])
 }
 var staticRenderFns = [
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("p", { staticClass: "lead" }, [
-      _vm._v("\n                by\n                "),
-      _c("a", { attrs: { href: "#" } }, [_vm._v("Start Bootstrap")])
-    ])
-  },
   function() {
     var _vm = this
     var _h = _vm.$createElement

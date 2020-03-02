@@ -9,16 +9,10 @@
                 <!-- Title -->
                 <h1 class="mt-4">{{ post.title }}</h1>
 
-                <!-- Author -->
-                <p class="lead">
-                    by
-                    <a href="#">Start Bootstrap</a>
-                </p>
-
                 <hr>
 
                 <!-- Date/Time -->
-                <p>Posted on January 1, 2019 at 12:00 PM</p>
+                <p>geposted am {{ post.created_at | moment("DD.MM.YYYY") }}</p>
 
                 <hr>
 
