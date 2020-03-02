@@ -34,7 +34,7 @@ Versionen:
 
 
 # Video:
-https://www.loom.com/share/b4d92b3ed6ac4ab383df84347231cfc1
+https://www.loom.com/share/6d3835559b4e427caa350f882b0fe06a
 
 
 # Datenbank Modell:
